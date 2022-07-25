@@ -1,5 +1,6 @@
 class AppStrings {
   static const signUp = "Sign UP";
+  static const signUpBtnText = "Signup";
   static const signIn = "Sign in";
   static const createAccountText = "Create an account";
   static const fullNameText = "Full name";

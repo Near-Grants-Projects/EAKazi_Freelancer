@@ -2,6 +2,7 @@ import 'package:ea_kazi/src/constants/app_colors.dart';
 import 'package:ea_kazi/src/constants/app_sizes.dart';
 import 'package:ea_kazi/src/constants/app_strings.dart';
 import 'package:ea_kazi/src/utils/size_config.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -168,6 +169,32 @@ class LogInScreen extends StatelessWidget {
                           child: const Text(AppStrings.signIn),
                         ),
                       ),
+                      gapH4,
+                      Center(
+                        child: RichText(
+                          text: TextSpan(
+                            style: Theme.of(context).textTheme.button!.copyWith(
+                                  fontSize: 13,
+                                ),
+                            children: [
+                              const TextSpan(text: "Don't have an account? "),
+                              TextSpan(
+                                text: AppStrings.signUpBtnText,
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .bodyText1
+                                    ?.copyWith(
+                                      fontSize: 13,
+                                      color: AppColors.altTextColor,
+                                    ),
+                                recognizer: TapGestureRecognizer()
+                                  ..onTap =
+                                      () {}, //TODO: IMPLEMENT NAVIGATION FUNCTIONALITY
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ),
@@ -201,7 +228,7 @@ class CustomTextFormField extends StatelessWidget {
         ),
       ),
       child: TextFormField(
-        cursorColor: AppColors.darkTextColor,
+        cursorColor: AppColors.darkColor,
         autovalidateMode: AutovalidateMode.onUserInteraction,
         textInputAction: TextInputAction.next,
         keyboardType: TextInputType.name,
@@ -214,7 +241,7 @@ class CustomTextFormField extends StatelessWidget {
           border: InputBorder.none,
           labelText: labelText,
           labelStyle: Theme.of(context).textTheme.subtitle1!.copyWith(
-                color: AppColors.secondaryTextcolor,
+                color: AppColors.secondaryColor,
               ),
         ),
       ),
