@@ -1,5 +1,6 @@
 import 'package:ea_kazi/src/constants/constants_exports.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 //TODO: REMINDER TO WORK ON THIS FILE
@@ -70,11 +71,11 @@ class EaKaziTheme {
 
   static ThemeData lightTheme() {
     return ThemeData(
-      // appBarTheme: const AppBarTheme(
-      //   systemOverlayStyle: SystemUiOverlayStyle.dark,
-      //   backgroundColor: AppColors.scaffoldBgColor,
-      //   elevation: 0,
-      // ),
+      appBarTheme: const AppBarTheme(
+        systemOverlayStyle: SystemUiOverlayStyle.dark,
+        backgroundColor: AppColors.scaffoldBgColor,
+        elevation: 0,
+      ),
       textTheme: _buildEaKaziTextTheme(ThemeData.light().textTheme),
       // primaryColor: AppColors.travexPrimaryColor,
       // primaryIconTheme: _customIconTheme(ThemeData.light().iconTheme),

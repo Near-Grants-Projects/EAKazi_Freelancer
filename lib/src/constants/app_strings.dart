@@ -17,4 +17,18 @@ class AppStrings {
       "Freelancers can bid for jobs after acquiring the required skillset and certifications.";
   static const thirdPageSubHeadingText =
       "Freelancers and trainers get paid and can make withdrawals to their local currencies.";
+  static const forgotPasswordText = "Forgot your password?";
+
+  // ********************* ERROR TEXTS ************************************/
+
+  static const shortPassWordErrorText = "Password is too short";
+  static const emptyPasswordErrorText = "Password can't be empty";
+  static const invalidEmailErrorText = "Invalid email";
+  static const emptyEmailErrorText = "Email can't be empty";
+  static const emptyNameField = "Name can't be empty";
+  static const invalidName = "Enter a valid name";
+
+  // ********************* ALREADY HAVE ACCOUNT TEXTS ************************************/
+  static const dontHaveAccountText = "Don't have an account? ";
+  static const alreadyHaveAccountText = "Already have an account? ";
 }

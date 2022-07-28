@@ -5,6 +5,7 @@ class AppColors {
   static const darkColor = Color(0xFF000000);
   static const secondaryColor = Color(0xFFADB5BD);
   static const textFormFieldColor = Color(0xFFEEF4FF);
-  static const altTextColor = Color(0xFF4175DF);
+  static const blueColor = Color(0xFF4175DF);
   static const btnColor = Color(0xFF333333);
+  static const transparentColor = Colors.transparent;
 }
