@@ -58,6 +58,10 @@ class _SignInScreenBodyState extends State<SignInScreenBody> {
       children: [
         Stack(
           children: [
+            Image.asset(
+              "assets/images/bbg.png",
+              fit: BoxFit.fill,
+            ),
             Padding(
               padding: kDefaultPadding,
               child: Column(

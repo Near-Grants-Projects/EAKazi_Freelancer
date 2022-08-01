@@ -8,4 +8,5 @@ class AppColors {
   static const blueColor = Color(0xFF4175DF);
   static const btnColor = Color(0xFF333333);
   static const transparentColor = Colors.transparent;
+  static const cardColor = Color(0xFFFCFCFF);
 }

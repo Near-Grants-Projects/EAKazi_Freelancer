@@ -31,4 +31,8 @@ class AppStrings {
   // ********************* ALREADY HAVE ACCOUNT TEXTS ************************************/
   static const dontHaveAccountText = "Don't have an account? ";
   static const alreadyHaveAccountText = "Already have an account? ";
+
+  // *********************************************************/
+  static const assessmentCourse = "Assessment Course";
+  static const takeCourse = "Take Course";
 }

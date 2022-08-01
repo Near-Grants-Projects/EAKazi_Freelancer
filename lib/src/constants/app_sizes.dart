@@ -8,24 +8,28 @@ class Sizes {
   static const p4 = 4.0;
   static const p6 = 6.0;
   static const p8 = 8.0;
+  static const p10 = 10.0;
   static const p12 = 12.0;
   static const p14 = 14.0;
   static const p16 = 16.0;
+  static const p18 = 18.0;
   static const p20 = 20.0;
   static const p24 = 24.0;
   static const p32 = 32.0;
   static const p48 = 48.0;
   static const p64 = 64.0;
+  static const p100 = 100.0;
 }
 
 /// Constant gap widths
 
-// final gapW2 = SizedBox(width: SizeConfig.blockSizeHorizontal * Sizes.p2);
-// final gapW4 = SizedBox(width: SizeConfig.blockSizeHorizontal * Sizes.p4);
-// final gapW8 = SizedBox(width: SizeConfig.blockSizeHorizontal * Sizes.p8);
-// final gapW12 = SizedBox(width: SizeConfig.blockSizeHorizontal * Sizes.p12);
-// final gapW16 = SizedBox(width: SizeConfig.blockSizeHorizontal * Sizes.p16);
-// final gapW20 = SizedBox(width: SizeConfig.blockSizeHorizontal * Sizes.p20);
+final gapW2 = SizedBox(width: SizeConfig.blockSizeHorizontal * Sizes.p2);
+final gapW4 = SizedBox(width: SizeConfig.blockSizeHorizontal * Sizes.p4);
+final gapW6 = SizedBox(width: SizeConfig.blockSizeHorizontal * Sizes.p6);
+final gapW8 = SizedBox(width: SizeConfig.blockSizeHorizontal * Sizes.p8);
+final gapW12 = SizedBox(width: SizeConfig.blockSizeHorizontal * Sizes.p12);
+final gapW16 = SizedBox(width: SizeConfig.blockSizeHorizontal * Sizes.p16);
+final gapW20 = SizedBox(width: SizeConfig.blockSizeHorizontal * Sizes.p20);
 // const gapW24 = SizedBox(width: Sizes.p24);
 // const gapW32 = SizedBox(width: Sizes.p32);
 // const gapW48 = SizedBox(width: Sizes.p48);

@@ -21,6 +21,7 @@ class PrimaryButton extends StatelessWidget {
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
+          onSurface: AppColors.blueColor,
           padding: kDefaultPadding,
         ),
         child:
