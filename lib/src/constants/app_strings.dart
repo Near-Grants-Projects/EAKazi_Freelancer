@@ -1,4 +1,5 @@
 class AppStrings {
+  static const emptyString = "";
   static const signUp = "Sign UP";
   static const signUpBtnText = "Signup";
   static const signIn = "Sign in";
@@ -35,4 +36,16 @@ class AppStrings {
   // *********************************************************/
   static const assessmentCourse = "Assessment Course";
   static const takeCourse = "Take Course";
+  static const getStarted = "Click here to get started";
+  static const bidJobs = "Bid For Jobs";
+  static const skillAcquisition = "Skill Acquisition";
+  static const recommended = "Recommended";
+  static const seeAll = "See all";
+
+  // ********************* CATEGORY TEXT ************************************/
+  static const media = "Media";
+  static const design = "Design";
+  static const devOps = "DevOps";
+  static const dataAnalysis = "Data analysis";
+  static const machineLearning = "Machine Learning";
 }

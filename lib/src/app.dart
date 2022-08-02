@@ -16,7 +16,7 @@ class EaKazi extends StatelessWidget {
     return MaterialApp(
       theme: theme,
       debugShowCheckedModeBanner: false,
-      home: const HomeScreen(),
+      home: const DefaultLayout(),
     );
   }
 }
