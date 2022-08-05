@@ -10,7 +10,7 @@ class SearchField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: Sizes.p20),
+      // padding: const EdgeInsets.symmetric(horizontal: Sizes.p20), //TODO: CHECK THIS
       width: double.infinity,
       decoration: BoxDecoration(
         // color: kSecondaryColor.withOpacity(0.1),

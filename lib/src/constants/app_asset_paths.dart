@@ -8,6 +8,8 @@ class AppAssetPaths {
   static const appLogo = "assets/icons/logo.svg";
   static const background = "assets/images/background.svg";
 
+  static const sendBtn = "assets/icons/send-alt-filled.svg";
+
   //************* RANDOM TO BE DELETED ***************/
   static const googleIcon = "assets/icons/google.svg";
   static const eaKaziIcon = "assets/icons/eakazi.svg";

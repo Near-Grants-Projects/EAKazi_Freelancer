@@ -49,6 +49,7 @@ class AppStrings {
   static const seeAll = "See all";
   static const courses = "Courses";
   static const messages = "Messages";
+  static const inputFieldHintMessage = "Type a message here";
 
   //************* PROFILE SCREEN TEXTS**********************/
   static const profile = "Profile";

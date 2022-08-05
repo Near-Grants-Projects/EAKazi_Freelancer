@@ -17,7 +17,17 @@ class CoursesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return EaKaziScaffold(
-      title: AppStrings.courses,
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text(
+          AppStrings.courses,
+          style: Theme.of(context).textTheme.headline6,
+        ),
+        leading: BackButton(
+          onPressed: () => null, //TODO: IMPLEMENT BACK BUTTON FUNCTIONALITY
+          color: AppColors.darkColor,
+        ),
+      ),
       body: Column(
         children: [
           const SearchField(),
@@ -213,6 +223,6 @@ class _CourseProgressIndicatorState extends State<CourseProgressIndicator> {
               )
             : const Text(AppStrings.emptyString),
       ),
-    ) ;
+    );
   }
 }

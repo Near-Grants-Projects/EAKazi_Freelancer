@@ -12,7 +12,6 @@ class EaKaziScaffold extends StatelessWidget {
     this.floatingActionButtonLocation,
     this.bottomNavigationBar,
     this.resizeToAvoidBottomInset,
-    this.title,
     this.appBar,
   }) : super(key: key);
 
@@ -22,7 +21,6 @@ class EaKaziScaffold extends StatelessWidget {
   final bool? resizeToAvoidBottomInset;
   final FloatingActionButtonLocation? floatingActionButtonLocation;
   final PreferredSizeWidget? appBar;
-  final String? title;
 
   @override
   Widget build(BuildContext context) {
@@ -37,17 +35,7 @@ class EaKaziScaffold extends StatelessWidget {
             ),
       child: Scaffold(
         resizeToAvoidBottomInset: resizeToAvoidBottomInset,
-        appBar: AppBar(
-          centerTitle: true,
-          title: Text(
-            title ?? AppStrings.emptyString,
-            style: Theme.of(context).textTheme.headline6,
-          ),
-          leading: BackButton(
-            onPressed: () => null, //TODO: IMPLEMENT BACK BUTTON FUNCTIONALITY
-            color: AppColors.darkColor,
-          ),
-        ),
+        appBar: appBar,
         body: SafeArea(
           child: SingleChildScrollView(
             child: body,

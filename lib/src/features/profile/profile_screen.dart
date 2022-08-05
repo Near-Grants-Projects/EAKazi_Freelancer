@@ -14,10 +14,18 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
-
-    // print(SizeConfig.blockSizeVertical * 9);
     return EaKaziScaffold(
-      title: AppStrings.profile,
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text(
+          AppStrings.profile,
+          style: Theme.of(context).textTheme.headline6,
+        ),
+        leading: BackButton(
+          onPressed: () => null, //TODO: IMPLEMENT BACK BUTTON FUNCTIONALITY
+          color: AppColors.darkColor,
+        ),
+      ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
