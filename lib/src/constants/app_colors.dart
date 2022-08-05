@@ -10,4 +10,7 @@ class AppColors {
   static const btnColor = Color(0xFF333333);
   static const transparentColor = Colors.transparent;
   static const cardColor = Color(0xFFFCFCFF);
+  static const progressColor = Color(0xFFFBBC04);
 }
+
+// background: #D4CDCD;

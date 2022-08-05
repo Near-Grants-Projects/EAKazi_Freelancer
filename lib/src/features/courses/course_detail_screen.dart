@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../../../common/common_exports.dart';
-import '../../../constants/constants_exports.dart';
-import '../../../utils/utils_exports.dart';
+import '../../common/common_exports.dart';
+import '../../constants/constants_exports.dart';
+import '../../utils/utils_exports.dart';
+
 
 class CourseDetailScreen extends StatelessWidget {
   const CourseDetailScreen({Key? key}) : super(key: key);

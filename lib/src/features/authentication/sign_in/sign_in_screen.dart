@@ -10,8 +10,8 @@ class SignInScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return EaKaziScaffold(
-      // extendBodyBehindAppBar: true,
       appBar: AppBar(
+        backgroundColor: Colors.transparent,
         leading: BackButton(
           onPressed: () => null, //TODO: IMPLEMENT BACK BUTTON FUNCTIONALITY
           color: AppColors.darkColor,

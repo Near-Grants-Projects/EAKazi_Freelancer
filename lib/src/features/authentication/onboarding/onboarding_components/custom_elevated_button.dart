@@ -1,6 +1,10 @@
+import 'package:ea_kazi/src/features/authentication/sign_in/sign_up_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../constants/constants_exports.dart';
+
+/// TODO: CHANGE THE MATERIAL PAGE ROUTE TO AUTO ROUTE AND CHECK IF THIS
+/// IS THE FIRST TIME A USER OPENED THE APP
 
 class CustomRoundElevatedButton extends StatelessWidget {
   const CustomRoundElevatedButton({Key? key}) : super(key: key);
@@ -17,7 +21,12 @@ class CustomRoundElevatedButton extends StatelessWidget {
           ),
         ),
         child: const Icon(Icons.arrow_forward),
-        onPressed: () => null, // TODO: IMPLEMENT NEXT PAGE NAVIGATION
+        onPressed: () => Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (_) => const SignUpScreen(),
+          ),
+        ), 
       ),
     );
   }

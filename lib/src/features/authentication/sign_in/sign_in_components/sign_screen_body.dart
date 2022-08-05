@@ -53,97 +53,101 @@ class _SignInScreenBodyState extends State<SignInScreenBody> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+    return Stack(
       children: [
-        Stack(
+        Image.asset(
+          "assets/images/Rectangle 16.png",
+          // fit: BoxFit.fill,
+        ),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Image.asset(
-              "assets/images/bbg.png",
-              fit: BoxFit.fill,
+            Stack(
+              children: [
+                Padding(
+                  padding: kDefaultPadding,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      gapH8,
+                      Text(
+                        AppStrings.signIn,
+                        style: Theme.of(context).textTheme.headline4,
+                      ),
+                      gapH2,
+                      Text(
+                        AppStrings.signUpSubtitleText,
+                        style: Theme.of(context).textTheme.subtitle1,
+                      ),
+                    ],
+                  ),
+                ),
+              ],
             ),
             Padding(
               padding: kDefaultPadding,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  gapH8,
-                  Text(
-                    AppStrings.signIn,
-                    style: Theme.of(context).textTheme.headline4,
+              child: FocusScope(
+                node: _node,
+                child: Form(
+                  key: _formKey,
+                  autovalidateMode: AutovalidateMode.onUserInteraction,
+                  child: Column(
+                    children: [
+                      CustomTextFormField(
+                        controller: _emailController,
+                        labelText: AppStrings.emailAddressText,
+                        inputFormatters: <TextInputFormatter>[
+                          ValidatorInputFormatter(
+                            editingValidator: EmailEditingRegexValidator(),
+                          ),
+                        ],
+                      ),
+                      gapH2,
+                      CustomTextFormField(
+                        controller: _passwordController,
+                        obscureText: true,
+                        labelText: AppStrings.passwordText,
+                        textInputAction: TextInputAction.done,
+                        inputFormatters: <TextInputFormatter>[
+                          ValidatorInputFormatter(
+                            editingValidator: NonEmptyStringValidator(),
+                          ),
+                        ],
+                        suffixIcon: IconButton(
+                          icon: const Icon(
+                            Icons.visibility,
+                            color: AppColors.secondaryColor,
+                          ),
+                          onPressed: () => null,
+                        ), //TODO IMPLEMENT VISIBILITY TOGGLE
+                      ),
+                      Align(
+                        alignment: Alignment.centerRight,
+                        child: CustomTextButton(
+                          buttonText: AppStrings.forgotPasswordText,
+                          onPressed: () => null,
+                          //TODO:IMPLEMENT FORGOT PASSWORD FUNCTIONALITY
+                        ),
+                      ),
+                      gapH6,
+                      PrimaryButton(
+                        text: AppStrings.signIn,
+                        onPressed: () => null,
+                        // TODO: IMPLEMENT FORM AUTHENETCIATION
+                      ),
+                      gapH2,
+                      AlreadyHaveAccountCheck(
+                        accountCheckTitle: AppStrings.dontHaveAccountText,
+                        accountCheckNavText: AppStrings.signUpBtnText,
+                        onPressed: () =>
+                            null, //TODO: IMPLEMENT NAVIGATION FUNCTIONALITY
+                      ),
+                    ],
                   ),
-                  gapH2,
-                  Text(
-                    AppStrings.signUpSubtitleText,
-                    style: Theme.of(context).textTheme.subtitle1,
-                  ),
-                ],
+                ),
               ),
             ),
           ],
-        ),
-        Padding(
-          padding: kDefaultPadding,
-          child: FocusScope(
-            node: _node,
-            child: Form(
-              key: _formKey,
-              autovalidateMode: AutovalidateMode.onUserInteraction,
-              child: Column(
-                children: [
-                  CustomTextFormField(
-                    controller: _emailController,
-                    labelText: AppStrings.emailAddressText,
-                    inputFormatters: <TextInputFormatter>[
-                      ValidatorInputFormatter(
-                        editingValidator: EmailEditingRegexValidator(),
-                      ),
-                    ],
-                  ),
-                  gapH2,
-                  CustomTextFormField(
-                    controller: _passwordController,
-                    obscureText: true,
-                    labelText: AppStrings.passwordText,
-                    textInputAction: TextInputAction.done,
-                    inputFormatters: <TextInputFormatter>[
-                      ValidatorInputFormatter(
-                        editingValidator: NonEmptyStringValidator(),
-                      ),
-                    ],
-                    suffixIcon: IconButton(
-                      icon: const Icon(
-                        Icons.visibility,
-                        color: AppColors.secondaryColor,
-                      ),
-                      onPressed: () => null,
-                    ), //TODO IMPLEMENT VISIBILITY TOGGLE
-                  ),
-                  Align(
-                    alignment: Alignment.centerRight,
-                    child: CustomTextButton(
-                      buttonText: AppStrings.forgotPasswordText,
-                      onPressed: () => null,
-                      //TODO:IMPLEMENT FORGOT PASSWORD FUNCTIONALITY
-                    ),
-                  ),
-                  gapH6,
-                  PrimaryButton(
-                    text: AppStrings.signIn,
-                    onPressed: () => null,
-                    // TODO: IMPLEMENT FORM AUTHENETCIATION
-                  ),
-                  gapH2,
-                  AlreadyHaveAccountCheck(
-                    accountCheckTitle: AppStrings.dontHaveAccountText,
-                    accountCheckNavText: AppStrings.signUpBtnText,
-                    onPressed: () =>
-                        null, //TODO: IMPLEMENT NAVIGATION FUNCTIONALITY
-                  ),
-                ],
-              ),
-            ),
-          ),
         ),
       ],
     );

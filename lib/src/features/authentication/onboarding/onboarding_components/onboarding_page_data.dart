@@ -14,17 +14,17 @@ class OnBoardingModel {
 
 List<OnBoardingModel> onBoardingData = [
   OnBoardingModel(
-    imagePath: "assets/icons/logo.svg",
+    imagePath: "assets/images/dollars.png",
     heading: AppStrings.firstPageHeadingText,
     subHeading: AppStrings.firstPageSubHeadingText,
   ),
   OnBoardingModel(
-    imagePath: "assets/icons/logo.svg",
+    imagePath: "assets/images/dollars.png",
     heading: AppStrings.secondPageHeadingText,
     subHeading: AppStrings.secondPageSubHeadingText,
   ),
   OnBoardingModel(
-    imagePath: "assets/icons/logo.svg",
+    imagePath: "assets/images/dollars.png",
     heading: AppStrings.thirdPageHeadingText,
     subHeading: AppStrings.thirdPageSubHeadingText,
   ),

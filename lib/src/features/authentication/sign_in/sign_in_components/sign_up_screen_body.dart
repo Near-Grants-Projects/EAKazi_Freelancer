@@ -1,8 +1,11 @@
+import 'package:ea_kazi/src/features/authentication/sign_in/sign_in_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../../common/common_exports.dart';
 import '../../../../constants/constants_exports.dart';
+import '../../../home/home_screen.dart';
 import 'already_have_account_check.dart';
 import 'auth_state.dart';
 import 'custom_textform_field.dart';
@@ -71,27 +74,36 @@ class _SignUpScreenBodyState extends State<SignUpScreenBody> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Stack(
-          children: [
-            Padding(
-              padding: kDefaultPadding,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  gapH8,
-                  Text(
-                    AppStrings.signUp,
-                    style: Theme.of(context).textTheme.headline4,
-                  ),
-                  gapH2,
-                  Text(
-                    AppStrings.signUpSubtitleText,
-                    style: Theme.of(context).textTheme.subtitle1,
-                  ),
-                ],
-              ),
+        Container(
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              fit: BoxFit.cover,
+              image: AssetImage("assets/images/Rectangle 16.png"),
             ),
-          ],
+          ),
+          child: Stack(
+            children: [
+              // SvgPicture.asset(AppAssetPaths.background),
+              Padding(
+                padding: kDefaultPadding,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    gapH8,
+                    Text(
+                      AppStrings.signUp,
+                      style: Theme.of(context).textTheme.headline4,
+                    ),
+                    gapH2,
+                    Text(
+                      AppStrings.signUpSubtitleText,
+                      style: Theme.of(context).textTheme.subtitle1,
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
         Padding(
           padding: kDefaultPadding,
@@ -144,15 +156,25 @@ class _SignUpScreenBodyState extends State<SignUpScreenBody> {
                   gapH6,
                   PrimaryButton(
                     text: AppStrings.createAccountText,
-                    onPressed: () => null,
+                    onPressed: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => const HomeScreen(),
+                      ),
+                    ),
                     // TODO: IMPLEMENT FORM AUTHENETCIATION
                   ),
                   gapH2,
                   AlreadyHaveAccountCheck(
                     accountCheckTitle: AppStrings.alreadyHaveAccountText,
                     accountCheckNavText: AppStrings.signIn,
-                    onPressed: () =>
-                        null, //TODO: IMPLEMENT NAVIGATION FUNCTIONALITY
+                    onPressed: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => const SignInScreen(),
+                      ),
+                    ),
+                    //TODO: IMPLEMENT NAVIGATION FUNCTIONALITY
                   ),
                 ],
               ),

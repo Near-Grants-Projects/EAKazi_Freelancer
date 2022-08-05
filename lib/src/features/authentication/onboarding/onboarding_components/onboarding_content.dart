@@ -1,6 +1,6 @@
 import 'package:ea_kazi/src/constants/constants_exports.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+// import 'package:flutter_svg/flutter_svg.dart';
 
 class OnBoardingContent extends StatelessWidget {
   const OnBoardingContent({
@@ -20,17 +20,15 @@ class OnBoardingContent extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        SvgPicture.asset(
+        Image.asset(
           imagePath,
+          scale: 3,
         ),
         gapH6,
-        SizedBox(
-          width: 300,
-          child: Text(
-            heading,
-            textAlign: TextAlign.center,
-            style: Theme.of(context).textTheme.headline5,
-          ),
+        Text(
+          heading,
+          textAlign: TextAlign.center,
+          style: Theme.of(context).textTheme.headline5,
         ),
         gapH2,
         Text(

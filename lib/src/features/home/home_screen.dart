@@ -1,5 +1,6 @@
 import 'package:ea_kazi/src/common/common_exports.dart';
 import 'package:ea_kazi/src/constants/constants_exports.dart';
+import 'package:ea_kazi/src/features/profile/profile_screen.dart';
 import 'package:ea_kazi/src/utils/size_config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -168,81 +169,39 @@ class HomeScreen extends StatelessWidget {
           companyName: "Google",
           locationType: "Remote",
           imagePath: AppAssetPaths.googleIcon,
+          altText: "3hrs ago •",
         ),
         const JobCard(
-          jobType: "Visual Designer - UI Designer", //TODO: JOB TYPE
-          companyName: "EA Pesa",
-          locationType: "Mwanza, Tanzania • Full Time",
-          imagePath: "assets/icons/eapesa.svg",
-        ),
+            jobType: "Visual Designer - UI Designer", //TODO: JOB TYPE
+            companyName: "EA Pesa",
+            locationType: "Mwanza, Tanzania • Full Time",
+            imagePath: "assets/icons/eapesa.svg",
+            altText: "3hrs ago •"),
         const JobCard(
-          jobType: "Visual Designer - UI Designer", //TODO: JOB TYPE
-          companyName: "EA Kazi",
-          locationType: "Nairobi, Kenya • Full Time",
-          imagePath: "assets/icons/eakazi.svg",
-        ),
+            jobType: "Visual Designer - UI Designer", //TODO: JOB TYPE
+            companyName: "EA Kazi",
+            locationType: "Nairobi, Kenya • Full Time",
+            imagePath: "assets/icons/eakazi.svg",
+            altText: "3hrs ago •"),
         const JobCard(
-          jobType: "Visual Designer - UI Designer", //TODO: JOB TYPE
-          companyName: "Google",
-          locationType: "Remote",
-          imagePath: AppAssetPaths.googleIcon,
-        ),
+            jobType: "Visual Designer - UI Designer", //TODO: JOB TYPE
+            companyName: "Google",
+            locationType: "Remote",
+            imagePath: AppAssetPaths.googleIcon,
+            altText: "3hrs ago •"),
         const JobCard(
-          jobType: "Visual Designer - UI Designer", //TODO: JOB TYPE
-          companyName: "EA Pesa",
-          locationType: "Mwanza, Tanzania • Full Time",
-          imagePath: "assets/icons/eapesa.svg",
-        ),
+            jobType: "Visual Designer - UI Designer", //TODO: JOB TYPE
+            companyName: "EA Pesa",
+            locationType: "Mwanza, Tanzania • Full Time",
+            imagePath: "assets/icons/eapesa.svg",
+            altText: "3hrs ago •"),
         const JobCard(
-          jobType: "Visual Designer - UI Designer", //TODO: JOB TYPE
-          companyName: "EA Kazi",
-          locationType: "Nairobi, Kenya • Full Time",
-          imagePath: "assets/icons/eakazi.svg",
-        ),
+            jobType: "Visual Designer - UI Designer", //TODO: JOB TYPE
+            companyName: "EA Kazi",
+            locationType: "Nairobi, Kenya • Full Time",
+            imagePath: "assets/icons/eakazi.svg",
+            altText: "3hrs ago •"),
       ],
-    );
-  }
-}
-
-class SearchField extends StatelessWidget {
-  const SearchField({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: Sizes.p10),
-      width: double.infinity,
-      decoration: BoxDecoration(
-        // color: kSecondaryColor.withOpacity(0.1),
-        borderRadius: BorderRadius.circular(15),
-      ),
-      child: TextField(
-        onChanged: (value) => print(value),
-        decoration: const InputDecoration(
-          // contentPadding: EdgeInsets.symmetric(
-          //     horizontal: getProportionateScreenWidth(20),
-          //     vertical: getProportionateScreenWidth(9)),
-          border: OutlineInputBorder(
-              // borderRadius: BorderRadius.all(
-              //   Radius.circular(5),
-              // ),
-              ),
-          focusedBorder: OutlineInputBorder(
-              // borderRadius: BorderRadius.all(
-              // Radius.circular(5),
-              // ),
-              ),
-          enabledBorder: OutlineInputBorder(
-              // borderRadius: BorderRadius.all(
-              //   Radius.circular(5),
-              // ),
-              ),
-          hintText: "e.g Game development jobs... ",
-          suffixIcon: Icon(Icons.search),
-        ),
-      ),
     );
   }
 }
@@ -324,7 +283,7 @@ class CategoryItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: Sizes.p10),
+      padding: const EdgeInsets.only(left: Sizes.p20),
       child: OutlinedButton(
         onPressed: onPressed,
         style: OutlinedButton.styleFrom(
@@ -405,15 +364,6 @@ class AlertsScreen extends StatelessWidget {
   }
 }
 
-class ProfileScreen extends StatelessWidget {
-  const ProfileScreen({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container();
-  }
-}
-
 class JobCard extends StatelessWidget {
   const JobCard({
     Key? key,
@@ -421,12 +371,14 @@ class JobCard extends StatelessWidget {
     required this.companyName,
     required this.locationType,
     required this.imagePath,
+    this.altText,
   }) : super(key: key);
 
   final String jobType;
   final String companyName;
   final String locationType;
   final String imagePath;
+  final String? altText;
 
   @override
   Widget build(BuildContext context) {
@@ -496,7 +448,7 @@ class JobCard extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            "3hrs ago •",
+                            altText!,
                             style: Theme.of(context)
                                 .textTheme
                                 .bodyText2!
@@ -522,3 +474,5 @@ class JobCard extends StatelessWidget {
     );
   }
 }
+
+//TODO: FIX JOB CARD

@@ -35,12 +35,31 @@ class AppStrings {
 
   // *********************************************************/
   static const assessmentCourse = "Assessment Course";
+  static const jobDetails = "Job Details";
+  static const description = "Description";
+  static const assessment = "Assessment";
+  static const aboutUs = "About Us";
+  static const applyNow = "Apply Now";
   static const takeCourse = "Take Course";
   static const getStarted = "Click here to get started";
   static const bidJobs = "Bid For Jobs";
+  static const assessmentQuiz = "Assessment Quiz";
   static const skillAcquisition = "Skill Acquisition";
   static const recommended = "Recommended";
   static const seeAll = "See all";
+  static const courses = "Courses";
+  static const messages = "Messages";
+
+  //************* PROFILE SCREEN TEXTS**********************/
+  static const profile = "Profile";
+  static const overview = "Overview";
+  static const portfolioProjects = "Portfolio projects";
+  static const nftCerts = "NFT Certificates";
+  static const registeredCourses = "Registered Courses";
+  static const skills = "Skills";
+  static const contact = "Contact";
+  static const hire = "Hire";
+  static const editProfile = "Edit profile";
 
   // ********************* CATEGORY TEXT ************************************/
   static const media = "Media";
