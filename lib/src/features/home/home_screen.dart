@@ -288,10 +288,7 @@ class CategoryItem extends StatelessWidget {
       child: OutlinedButton(
         onPressed: onPressed,
         style: OutlinedButton.styleFrom(
-          side: const BorderSide(
-            color: AppColors.blueColor,
-            width: Sizes.p2,
-          ),
+          side: const BorderSide(color: AppColors.blueColor),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(Sizes.p10),
           ),

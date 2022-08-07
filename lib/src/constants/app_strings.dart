@@ -36,6 +36,7 @@ class AppStrings {
   // *********************************************************/
   static const assessmentCourse = "Assessment Course";
   static const jobDetails = "Job Details";
+  static const jobs = "Jobs";
   static const description = "Description";
   static const assessment = "Assessment";
   static const aboutUs = "About Us";

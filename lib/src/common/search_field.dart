@@ -1,6 +1,5 @@
+import 'package:ea_kazi/src/constants/constants_exports.dart';
 import 'package:flutter/material.dart';
-
-import '../constants/constants_exports.dart';
 
 class SearchField extends StatelessWidget {
   const SearchField({
@@ -10,7 +9,9 @@ class SearchField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      // padding: const EdgeInsets.symmetric(horizontal: Sizes.p20), //TODO: CHECK THIS
+      padding: const EdgeInsets.symmetric(
+        horizontal: Sizes.p20,
+      ), //TODO: CHECK THIS
       width: double.infinity,
       decoration: BoxDecoration(
         // color: kSecondaryColor.withOpacity(0.1),

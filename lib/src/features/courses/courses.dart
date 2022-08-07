@@ -1,8 +1,4 @@
-import 'dart:async';
-
 import 'package:ea_kazi/src/common/common_exports.dart';
-import 'package:ea_kazi/src/constants/app_sizes.dart';
-import 'package:ea_kazi/src/constants/app_strings.dart';
 import 'package:ea_kazi/src/utils/size_config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -113,7 +109,7 @@ class CourseCard extends StatelessWidget {
                 spreadRadius: Sizes.p2,
                 blurRadius: Sizes.p4,
                 offset: const Offset(Sizes.p0, Sizes.p4),
-              )
+              ),
             ],
           ),
           child: Padding(
