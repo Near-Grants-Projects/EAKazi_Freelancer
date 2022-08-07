@@ -1,6 +1,7 @@
 import 'package:ea_kazi/src/common/common_exports.dart';
 import 'package:ea_kazi/src/constants/constants_exports.dart';
 import 'package:ea_kazi/src/features/profile/profile_screen.dart';
+import 'package:ea_kazi/src/features/wallet/wallet_screen.dart';
 import 'package:ea_kazi/src/utils/size_config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -345,15 +346,6 @@ List<Category> categoryData = const [
     imagePath: "assets/icons/machineLearning.svg",
   ),
 ];
-
-class WalletScreen extends StatelessWidget {
-  const WalletScreen({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container();
-  }
-}
 
 class AlertsScreen extends StatelessWidget {
   const AlertsScreen({Key? key}) : super(key: key);

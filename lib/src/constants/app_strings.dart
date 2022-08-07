@@ -50,8 +50,11 @@ class AppStrings {
   static const courses = "Courses";
   static const messages = "Messages";
   static const inputFieldHintMessage = "Type a message here";
+  static const currentBalance = "Current balance";
+  static const nearBalance = "NEAR balance";
+  static const ngnBalance = "NGN balance";
 
-  //************* PROFILE SCREEN TEXTS**********************/
+  //************* PROFILE SCREEN TEXTS`**********************/
   static const profile = "Profile";
   static const overview = "Overview";
   static const portfolioProjects = "Portfolio projects";
@@ -62,10 +65,26 @@ class AppStrings {
   static const hire = "Hire";
   static const editProfile = "Edit profile";
 
-  // ********************* CATEGORY TEXT ************************************/
+  // ********************* CATEGORY TEXTS ************************************/
   static const media = "Media";
   static const design = "Design";
   static const devOps = "DevOps";
   static const dataAnalysis = "Data analysis";
   static const machineLearning = "Machine Learning";
+
+  //********************* WALLET TEXTS ************************************/
+  static const withdrawal = "Withdrawal";
+  static const withdraw = "Withdraw";
+  static const deposit = "Deposit";
+  static const exchange = "Exchange";
+  static const send = "Send";
+  static const wallet = "Wallet";
+  static const selectAsset = "Select Asset";
+  static const selectIntrests = "Select Interests";
+  static const next = "Next";
+  static const selectBank = "Select Bank";
+  static const accountNumber = "Account Number";
+  static const ammount = "Amount";
+  static const enterPin = "Enter 4-Digit Pin";
+  static const enterPinHelperText = "Enter your 4 digit pin to confirm";
 }
