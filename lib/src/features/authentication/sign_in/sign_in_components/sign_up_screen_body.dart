@@ -1,7 +1,6 @@
 import 'package:ea_kazi/src/features/authentication/sign_in/sign_in_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../../common/common_exports.dart';
 import '../../../../constants/constants_exports.dart';

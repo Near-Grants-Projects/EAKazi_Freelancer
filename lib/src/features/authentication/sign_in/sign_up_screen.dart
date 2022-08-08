@@ -11,7 +11,7 @@ class SignUpScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const EaKaziScaffold(
+    return const Scaffold(
       body: SignUpScreenBody(
         authFormType: AuthFormType.register,
       ),

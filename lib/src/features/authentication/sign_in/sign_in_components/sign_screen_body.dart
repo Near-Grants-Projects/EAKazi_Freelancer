@@ -1,3 +1,4 @@
+import 'package:ea_kazi/src/features/home/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -55,17 +56,19 @@ class _SignInScreenBodyState extends State<SignInScreenBody> {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Image.asset(
-          "assets/images/Rectangle 16.png",
-          // fit: BoxFit.fill,
-        ),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Stack(
               children: [
-                Padding(
+                Container(
                   padding: kDefaultPadding,
+                  decoration: const BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage("assets/images/Rectangle 16.png"),
+                      fit: BoxFit.fill,
+                    ),
+                  ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -132,7 +135,12 @@ class _SignInScreenBodyState extends State<SignInScreenBody> {
                       gapH6,
                       PrimaryButton(
                         text: AppStrings.signIn,
-                        onPressed: () => null,
+                        onPressed: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (_) => const HomeScreen(),
+                          ),
+                        ),
                         // TODO: IMPLEMENT FORM AUTHENETCIATION
                       ),
                       gapH2,
@@ -140,7 +148,7 @@ class _SignInScreenBodyState extends State<SignInScreenBody> {
                         accountCheckTitle: AppStrings.dontHaveAccountText,
                         accountCheckNavText: AppStrings.signUpBtnText,
                         onPressed: () =>
-                            null, //TODO: IMPLEMENT NAVIGATION FUNCTIONALITY
+                            Navigator.pop(context), //TODO: IMPLEMENT NAVIGATION FUNCTIONALITY
                       ),
                     ],
                   ),

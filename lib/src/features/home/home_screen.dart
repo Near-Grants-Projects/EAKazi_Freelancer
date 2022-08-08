@@ -1,5 +1,8 @@
 import 'package:ea_kazi/src/common/common_exports.dart';
 import 'package:ea_kazi/src/constants/constants_exports.dart';
+import 'package:ea_kazi/src/features/courses/courses.dart';
+import 'package:ea_kazi/src/features/job_description/job_description.dart';
+import 'package:ea_kazi/src/features/job_description/jobs_screen.dart';
 import 'package:ea_kazi/src/features/profile/profile_screen.dart';
 import 'package:ea_kazi/src/features/wallet/wallet_screen.dart';
 import 'package:ea_kazi/src/utils/size_config.dart';
@@ -23,8 +26,7 @@ class DefaultLayout extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final bottomNavIndex = ref.watch(bottomNavIndexProvider);
 
-    void _setBottomNavIndex(int index) =>
-        ref.watch(bottomNavIndexProvider.notifier).state = index;
+    void _setBottomNavIndex(int index) => ref.watch(bottomNavIndexProvider.notifier).state = index;
 
     SizeConfig().init(context);
     return EaKaziScaffold(
@@ -87,122 +89,134 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Padding(
-          padding: kDefaultPadding / 2,
-          child: Row(
-            children: [
-              //TODO: TURN TO TEMPLATE TEXT
-              Text(
-                "Hi, Mary",
-                style: Theme.of(context).textTheme.headline5,
-              ),
-              Spacer(),
-              IconButton(
-                onPressed: () => null,
-                icon: Icon(Icons.more_horiz),
-              ),
-            ],
-          ),
-        ),
-        SearchField(),
-        gapH2,
-        SizedBox(
-          height: 150,
-          child: ListView(
-            shrinkWrap: true,
-            primary: false,
-            scrollDirection: Axis.horizontal,
-            children: [
-              ChoiceType(
-                title: AppStrings.skillAcquisition,
-                imagePath: "assets/images/task.png",
-                onPressed: () => null, //TODO: IMPLEMENTATION HERE
-              ),
-              ChoiceType(
-                title: AppStrings.bidJobs,
-                imagePath: "assets/images/jobs.png",
-                onPressed: () => null, //TODO: IMPLEMENTATION HERE
-              ),
-              gapW4,
-            ],
-          ),
-        ),
-        gapH2,
-        SizedBox(
-          height: 50,
-          child: ListView.builder(
-            primary: false,
-            scrollDirection: Axis.horizontal,
-            itemCount: categoryData.length,
-            itemBuilder: (_, index) => CategoryItem(
-              title: categoryData[index].title,
-              imagePath: categoryData[index].imagePath,
-              onPressed: () => null,
-              //TODO: SORT THIS ONPRESSED IMPLEMENTATION
+    return EaKaziScaffold(
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: kDefaultPadding / 2,
+            child: Row(
+              children: [
+                //TODO: TURN TO TEMPLATE TEXT
+                Text(
+                  "Hi, Mary",
+                  style: Theme.of(context).textTheme.headline5,
+                ),
+                const Spacer(),
+                IconButton(
+                  onPressed: () => null,
+                  icon: const Icon(Icons.more_horiz),
+                ),
+              ],
             ),
           ),
-        ),
-        Padding(
-          padding: kDefaultPadding / 2,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                AppStrings.recommended,
-                style: Theme.of(context).textTheme.subtitle1,
-              ),
-              TextButton(
+          const SearchField(),
+          gapH2,
+          SizedBox(
+            height: 150,
+            child: ListView(
+              shrinkWrap: true,
+              primary: false,
+              scrollDirection: Axis.horizontal,
+              children: [
+                ChoiceType(
+                  title: AppStrings.skillAcquisition,
+                  imagePath: "assets/images/task.png",
+                  onPressed: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => const CoursesScreen(),
+                    ),
+                  ), //TODO: IMPLEMENTATION HERE
+                ),
+                ChoiceType(
+                  title: AppStrings.bidJobs,
+                  imagePath: "assets/images/jobs.png",
+                  onPressed: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => const JobsScreen(),
+                    ),
+                  ), //TODO: IMPLEMENTATION HERE
+                ),
+                gapW4,
+              ],
+            ),
+          ),
+          gapH2,
+          SizedBox(
+            height: 50,
+            child: ListView.builder(
+              primary: false,
+              scrollDirection: Axis.horizontal,
+              itemCount: categoryData.length,
+              itemBuilder: (_, index) => CategoryItem(
+                title: categoryData[index].title,
+                imagePath: categoryData[index].imagePath,
                 onPressed: () => null,
-                //TODO: IMPLEMENT SEE ALL RECOMMENDATIONS
-                child: Text(
-                  AppStrings.seeAll,
+                //TODO: SORT THIS ONPRESSED IMPLEMENTATION
+              ),
+            ),
+          ),
+          Padding(
+            padding: kDefaultPadding / 2,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  AppStrings.recommended,
                   style: Theme.of(context).textTheme.subtitle1,
                 ),
-              ),
-            ],
+                TextButton(
+                  onPressed: () => null,
+                  //TODO: IMPLEMENT SEE ALL RECOMMENDATIONS
+                  child: Text(
+                    AppStrings.seeAll,
+                    style: Theme.of(context).textTheme.subtitle1,
+                  ),
+                ),
+              ],
+            ),
           ),
-        ),
-        const JobCard(
-          jobType: "Visual Designer - UI Designer", //TODO: JOB TYPE
-          companyName: "Google",
-          locationType: "Remote",
-          imagePath: AppAssetPaths.googleIcon,
-          altText: "3hrs ago •",
-        ),
-        const JobCard(
-            jobType: "Visual Designer - UI Designer", //TODO: JOB TYPE
-            companyName: "EA Pesa",
-            locationType: "Mwanza, Tanzania • Full Time",
-            imagePath: "assets/icons/eapesa.svg",
-            altText: "3hrs ago •"),
-        const JobCard(
-            jobType: "Visual Designer - UI Designer", //TODO: JOB TYPE
-            companyName: "EA Kazi",
-            locationType: "Nairobi, Kenya • Full Time",
-            imagePath: "assets/icons/eakazi.svg",
-            altText: "3hrs ago •"),
-        const JobCard(
+          const JobCard(
             jobType: "Visual Designer - UI Designer", //TODO: JOB TYPE
             companyName: "Google",
             locationType: "Remote",
             imagePath: AppAssetPaths.googleIcon,
-            altText: "3hrs ago •"),
-        const JobCard(
-            jobType: "Visual Designer - UI Designer", //TODO: JOB TYPE
-            companyName: "EA Pesa",
-            locationType: "Mwanza, Tanzania • Full Time",
-            imagePath: "assets/icons/eapesa.svg",
-            altText: "3hrs ago •"),
-        const JobCard(
-            jobType: "Visual Designer - UI Designer", //TODO: JOB TYPE
-            companyName: "EA Kazi",
-            locationType: "Nairobi, Kenya • Full Time",
-            imagePath: "assets/icons/eakazi.svg",
-            altText: "3hrs ago •"),
-      ],
+            altText: "3hrs ago •",
+          ),
+          const JobCard(
+              jobType: "Visual Designer - UI Designer", //TODO: JOB TYPE
+              companyName: "EA Pesa",
+              locationType: "Mwanza, Tanzania • Full Time",
+              imagePath: "assets/icons/eapesa.svg",
+              altText: "3hrs ago •"),
+          const JobCard(
+              jobType: "Visual Designer - UI Designer", //TODO: JOB TYPE
+              companyName: "EA Kazi",
+              locationType: "Nairobi, Kenya • Full Time",
+              imagePath: "assets/icons/eakazi.svg",
+              altText: "3hrs ago •"),
+          const JobCard(
+              jobType: "Visual Designer - UI Designer", //TODO: JOB TYPE
+              companyName: "Google",
+              locationType: "Remote",
+              imagePath: AppAssetPaths.googleIcon,
+              altText: "3hrs ago •"),
+          const JobCard(
+              jobType: "Visual Designer - UI Designer", //TODO: JOB TYPE
+              companyName: "EA Pesa",
+              locationType: "Mwanza, Tanzania • Full Time",
+              imagePath: "assets/icons/eapesa.svg",
+              altText: "3hrs ago •"),
+          const JobCard(
+              jobType: "Visual Designer - UI Designer", //TODO: JOB TYPE
+              companyName: "EA Kazi",
+              locationType: "Nairobi, Kenya • Full Time",
+              imagePath: "assets/icons/eakazi.svg",
+              altText: "3hrs ago •"),
+        ],
+      ),
     );
   }
 }
@@ -374,7 +388,12 @@ class JobCard extends StatelessWidget {
     return Padding(
       padding: kDefaultPadding / Sizes.p2,
       child: InkWell(
-        onTap: () => null, //TODO: WORK ON THIS FOR LISTVIEW
+        onTap: () => Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (_) => const JobDescriptionScreen(),
+          ),
+        ), //TODO: WORK ON THIS FOR LISTVIEW
         child: Container(
           decoration: BoxDecoration(
             color: AppColors.scaffoldBgColor,
@@ -389,7 +408,7 @@ class JobCard extends StatelessWidget {
             ],
           ),
           child: Padding(
-            padding: EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
             child: Row(
               children: [
                 Container(
@@ -430,10 +449,7 @@ class JobCard extends StatelessWidget {
                             child: Text(
                               jobType,
                               softWrap: true,
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .subtitle2!
-                                  .copyWith(fontSize: 16),
+                              style: Theme.of(context).textTheme.subtitle2!.copyWith(fontSize: 16),
                             ),
                           ),
                           Text(
