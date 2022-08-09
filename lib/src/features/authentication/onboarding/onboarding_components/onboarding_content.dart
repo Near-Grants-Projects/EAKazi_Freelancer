@@ -19,7 +19,7 @@ class OnBoardingContent extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Image.asset(imagePath),
+        Expanded(child: Image.asset(imagePath)),
         gapH6,
         Text(
           heading,

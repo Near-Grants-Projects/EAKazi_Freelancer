@@ -3,9 +3,6 @@ import 'package:ea_kazi/src/constants/constants_exports.dart';
 import 'package:flutter/material.dart';
 import 'package:ea_kazi/src/routes/router.gr.dart';
 
-/// TODO: CHANGE THE MATERIAL PAGE ROUTE TO AUTO ROUTE AND CHECK IF THIS
-/// TODO:IS THE FIRST TIME A USER OPENED THE APP
-
 class CustomRoundElevatedButton extends StatelessWidget {
   const CustomRoundElevatedButton({Key? key}) : super(key: key);
   @override
