@@ -1,3 +1,4 @@
+import 'package:ea_kazi/src/constants/app_asset_paths.dart';
 import 'package:ea_kazi/src/constants/app_strings.dart';
 
 class OnBoardingModel {
@@ -14,17 +15,17 @@ class OnBoardingModel {
 
 List<OnBoardingModel> onBoardingData = [
   OnBoardingModel(
-    imagePath: "assets/images/dollars.png",
+    imagePath: AppAssetPaths.personImage,
     heading: AppStrings.firstPageHeadingText,
     subHeading: AppStrings.firstPageSubHeadingText,
   ),
   OnBoardingModel(
-    imagePath: "assets/images/dollars.png",
+    imagePath: AppAssetPaths.bidJobImage,
     heading: AppStrings.secondPageHeadingText,
     subHeading: AppStrings.secondPageSubHeadingText,
   ),
   OnBoardingModel(
-    imagePath: "assets/images/dollars.png",
+    imagePath: AppAssetPaths.getPaidImage,
     heading: AppStrings.thirdPageHeadingText,
     subHeading: AppStrings.thirdPageSubHeadingText,
   ),

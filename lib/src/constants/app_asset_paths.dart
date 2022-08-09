@@ -1,4 +1,12 @@
 class AppAssetPaths {
+  // * OnBoarding Screen Asset Paths
+  static const getPaidImage = "assets/images/getpaid.png";
+  static const bidJobImage = "assets/images/bid.png";
+  static const personImage = "assets/images/personCoffee.png";
+
+  //* Sign In Screen Asset Paths
+  static const backgroundImage = "assets/images/Rectangle 16.png";
+
   //************ BOTTOM NAVIGATION ICONS**************************/
   static const homeNavIcon = "assets/icons/home.svg";
   static const walletNavIcon = "assets/icons/wallet.svg";
@@ -6,7 +14,6 @@ class AppAssetPaths {
   static const profileNavIcon = "assets/icons/profile.svg";
 
   static const appLogo = "assets/icons/logo.svg";
-  static const background = "assets/images/background.svg";
 
   static const sendBtn = "assets/icons/send-alt-filled.svg";
 

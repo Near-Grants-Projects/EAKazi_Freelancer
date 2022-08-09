@@ -1,22 +1,18 @@
+import 'package:auto_route/auto_route.dart';
+import 'package:ea_kazi/src/common/common_exports.dart';
+import 'package:ea_kazi/src/constants/constants_exports.dart';
 import 'package:ea_kazi/src/features/authentication/sign_in/sign_in_screen.dart';
+import 'package:ea_kazi/src/features/home/home_screen.dart';
+import 'package:ea_kazi/src/routes/router.gr.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../../../../common/common_exports.dart';
-import '../../../../constants/constants_exports.dart';
-import '../../../home/home_screen.dart';
-import 'already_have_account_check.dart';
-import 'auth_state.dart';
-import 'custom_textform_field.dart';
-import 'string_validators.dart';
+import 'sign_in_components_exports.dart';
 
 class SignUpScreenBody extends StatefulWidget {
   const SignUpScreenBody({
     Key? key,
-    required this.authFormType,
   }) : super(key: key);
-
-  final AuthFormType authFormType;
   @override
   State<SignUpScreenBody> createState() => _SignUpScreenBodyState();
 }
@@ -32,32 +28,9 @@ class _SignUpScreenBodyState extends State<SignUpScreenBody> {
 
   final _nameController = TextEditingController();
 
-  // var _submitted = false;
-
   String get email => _emailController.text;
   String get password => _passwordController.text;
   String get name => _nameController.text;
-
-  // void _emailEditingComplete(AuthState state) {
-  //   if (state.canSubmitEmail(email)) {
-  //     _node.nextFocus();
-  //   }
-  // }
-
-  // void _nameEditingComplete(AuthState state) {
-  //   if (!state.canSubmitName(name)) {
-  //     _node.nextFocus();
-  //     return;
-  //   }
-  // }
-
-  // void _passwordEditingComplete(AuthState state) {
-  //   if (!state.canSubmitEmail(email)) {
-  //     _node.previousFocus();
-  //     return;
-  //   }
-  //   // _submit(state);
-  // }
 
   @override
   void dispose() {
@@ -77,12 +50,11 @@ class _SignUpScreenBodyState extends State<SignUpScreenBody> {
           decoration: const BoxDecoration(
             image: DecorationImage(
               fit: BoxFit.cover,
-              image: AssetImage("assets/images/Rectangle 16.png"),
+              image: AssetImage(AppAssetPaths.backgroundImage),
             ),
           ),
           child: Stack(
             children: [
-              // SvgPicture.asset(AppAssetPaths.background),
               Padding(
                 padding: kDefaultPadding,
                 child: Column(
@@ -154,26 +126,17 @@ class _SignUpScreenBodyState extends State<SignUpScreenBody> {
                   ),
                   gapH6,
                   PrimaryButton(
-                    text: AppStrings.createAccountText,
-                    onPressed: () => Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (_) => const HomeScreen(),
+                      text: AppStrings.createAccountText,
+                      onPressed: () => context.router.replace(const HomeRoute())
+                      // TODO: IMPLEMENT FORM AUTHENETCIATION
                       ),
-                    ),
-                    // TODO: IMPLEMENT FORM AUTHENETCIATION
-                  ),
                   gapH2,
                   AlreadyHaveAccountCheck(
                     accountCheckTitle: AppStrings.alreadyHaveAccountText,
                     accountCheckNavText: AppStrings.signIn,
-                    onPressed: () => Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (_) => const SignInScreen(),
-                      ),
+                    onPressed: () => context.router.replace(
+                      const SignInRoute(),
                     ),
-                    //TODO: IMPLEMENT NAVIGATION FUNCTIONALITY
                   ),
                 ],
               ),

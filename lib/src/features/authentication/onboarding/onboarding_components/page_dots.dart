@@ -19,7 +19,7 @@ class PageDots extends ConsumerWidget {
     return AnimatedContainer(
       duration: kAnimationDuration,
       curve: Curves.easeInOut,
-      margin: const EdgeInsets.only(right: 5),
+      margin: const EdgeInsets.only(right: Sizes.p6),
       padding: const EdgeInsets.all(Sizes.p4),
       height: Sizes.p16,
       width: Sizes.p16,
