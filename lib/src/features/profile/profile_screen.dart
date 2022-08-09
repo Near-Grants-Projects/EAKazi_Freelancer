@@ -68,10 +68,7 @@ class ProfileScreen extends StatelessWidget {
                         ),
                         child: Text(
                           AppStrings.editProfile,
-                          style: Theme.of(context)
-                              .textTheme
-                              .bodyText2!
-                              .copyWith(
+                          style: Theme.of(context).textTheme.bodyText2!.copyWith(
                                 color: const Color(0XFF595085), //TODO: ISSUES
                               ),
                         ),
@@ -109,7 +106,7 @@ class ProfileScreen extends StatelessWidget {
                       child: Text(
                         skills[index],
                         style: Theme.of(context).textTheme.subtitle1!.copyWith(
-                              color: Color(0xFF479696),
+                              color: const Color(0xFF479696),
                             ),
                       ),
                     ),
@@ -159,10 +156,8 @@ class ProfileScreen extends StatelessWidget {
             padding: const EdgeInsets.all(Sizes.p20),
             child: Text(
               AppStrings.portfolioProjects,
-              style: Theme.of(context)
-                  .textTheme
-                  .subtitle1!
-                  .copyWith(color: const Color(0xFF22215B)),
+              style:
+                  Theme.of(context).textTheme.subtitle1!.copyWith(color: const Color(0xFF22215B)),
             ),
           ),
           //TODO: PORTFOLIO PROJECTS
@@ -175,9 +170,7 @@ class ProfileScreen extends StatelessWidget {
               color: const Color(0xFFF1F3F6), //TODO
               borderRadius: BorderRadius.circular(Sizes.p10),
             ),
-            child: const Placeholder(
-              child: Center(child: Text("IMAGE GOES HERE")),
-            ),
+            child: Image.asset('assets/images/jobs.png'),
           ),
           Padding(
             padding: const EdgeInsets.all(Sizes.p20),
@@ -197,9 +190,7 @@ class ProfileScreen extends StatelessWidget {
               color: const Color(0xFFF1F3F6), //TODO
               borderRadius: BorderRadius.circular(Sizes.p10),
             ),
-            child: const Placeholder(
-              child: Center(child: Text("IMAGE GOES HERE")),
-            ),
+            child: Image.asset('assets/images/jobs.png'),
           ),
           gapH2,
           Padding(
