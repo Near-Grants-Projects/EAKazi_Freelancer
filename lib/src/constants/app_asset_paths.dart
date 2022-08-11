@@ -13,6 +13,16 @@ class AppAssetPaths {
   static const alertNavIcon = "assets/icons/alerts.svg";
   static const profileNavIcon = "assets/icons/profile.svg";
 
+  //*********** HOME SCREEN ASSET PATHS *************/
+  static const skillAcquisitionIcon = "assets/images/task.png";
+  static const bidForJobsIcon = "assets/images/jobs.png";
+  static const mediaIcon = "assets/icons/media.svg";
+  static const designIcon = "assets/icons/design.svg";
+  static const devOpsIcon = "assets/icons/devOps.svg";
+  static const dataAnalysisIcon = "assets/icons/dataAnalysis.svg";
+  //TODO: MACHINE LEARENING ICON
+  static const machineLearningIcon = "assets/icons/machineLearning.svg";
+
   static const appLogo = "assets/icons/logo.svg";
 
   static const sendBtn = "assets/icons/send-alt-filled.svg";

@@ -5,7 +5,7 @@ import 'app_sizes.dart';
 
 const kAnimationDuration = Duration(milliseconds: 200);
 
-const kDefaultPadding = EdgeInsets.all(Sizes.p20);
+const kDefaultPadding = EdgeInsets.all(Sizes.p16);
 
 final defaultBoxShadow = [
   BoxShadow(

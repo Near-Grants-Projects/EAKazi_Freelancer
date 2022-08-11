@@ -1,12 +1,14 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:ea_kazi/src/common/reusable_card.dart';
+
+import 'package:ea_kazi/src/features/jobs/presentation/home/home_components/category_item.dart';
+import 'package:ea_kazi/src/features/jobs/presentation/home/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:ea_kazi/src/common/common_exports.dart';
 import 'package:ea_kazi/src/constants/constants_exports.dart';
-import 'package:ea_kazi/src/features/home/home_screen.dart';
 import 'package:ea_kazi/src/utils/utils_exports.dart';
+
+import '../jobs/presentation/home/home_components/category.dart';
 
 class JobsScreen extends StatelessWidget {
   const JobsScreen({Key? key}) : super(key: key);
@@ -45,7 +47,7 @@ class JobsScreen extends StatelessWidget {
             ),
           ),
           gapH4,
-          ReusableCard(
+          ReusableCardWidget(
             margin: kDefaultPadding / 2,
             imagePath: AppAssetPaths.googleIcon,
             title: "Jelafrica",
@@ -59,7 +61,7 @@ class JobsScreen extends StatelessWidget {
                   ),
             ),
           ),
-          ReusableCard(
+          ReusableCardWidget(
             margin: kDefaultPadding / 2,
             imagePath: AppAssetPaths.googleIcon,
             title: "Jelafrica",
@@ -67,7 +69,7 @@ class JobsScreen extends StatelessWidget {
             altText: "UI/UX Design Certificate required",
             auxilliarytext: "• N200,000",
           ),
-          ReusableCard(
+          ReusableCardWidget(
             margin: kDefaultPadding / 2,
             imagePath: AppAssetPaths.googleIcon,
             title: "Jelafrica",
@@ -75,7 +77,7 @@ class JobsScreen extends StatelessWidget {
             altText: "UI/UX Design Certificate required",
             auxilliarytext: "• N200,000",
           ),
-          ReusableCard(
+          ReusableCardWidget(
             margin: kDefaultPadding / 2,
             imagePath: AppAssetPaths.googleIcon,
             title: "Jelafrica",
@@ -83,7 +85,7 @@ class JobsScreen extends StatelessWidget {
             altText: "UI/UX Design Certificate required",
             auxilliarytext: "• N200,000",
           ),
-          ReusableCard(
+          ReusableCardWidget(
             margin: kDefaultPadding / 2,
             imagePath: AppAssetPaths.googleIcon,
             title: "Jelafrica",
@@ -91,7 +93,7 @@ class JobsScreen extends StatelessWidget {
             altText: "UI/UX Design Certificate required",
             auxilliarytext: "• N200,000",
           ),
-          ReusableCard(
+          ReusableCardWidget(
             margin: kDefaultPadding / 2,
             imagePath: AppAssetPaths.googleIcon,
             title: "Jelafrica",

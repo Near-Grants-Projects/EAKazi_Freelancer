@@ -1,7 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:ea_kazi/src/common/common_exports.dart';
 import 'package:ea_kazi/src/constants/constants_exports.dart';
-import 'package:ea_kazi/src/features/home/home_screen.dart';
 import 'package:ea_kazi/src/routes/router.gr.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -119,7 +118,7 @@ class _SignInScreenBodyState extends State<SignInScreenBody> {
                       PrimaryButton(
                         text: AppStrings.signIn,
                         onPressed: () => context.router.replace(
-                          const HomeRoute(),
+                          const DefaultWrapperRoute(),
                         ),
                         // TODO: IMPLEMENT FORM AUTHENETCIATION
                       ),

@@ -119,10 +119,12 @@ class _SignUpScreenBodyState extends State<SignUpScreenBody> {
                 ),
                 gapH6,
                 PrimaryButton(
-                    text: AppStrings.createAccountText,
-                    onPressed: () => context.router.replace(const HomeRoute())
-                    // TODO: IMPLEMENT FORM AUTHENETCIATION
-                    ),
+                  text: AppStrings.createAccountText,
+                  onPressed: () => context.router.replace(
+                    const DefaultWrapperRoute(),
+                  ),
+                  // TODO: IMPLEMENT FORM AUTHENETCIATION
+                ),
                 gapH2,
                 AlreadyHaveAccountCheck(
                   accountCheckTitle: AppStrings.alreadyHaveAccountText,

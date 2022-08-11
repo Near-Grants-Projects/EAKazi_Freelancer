@@ -1,10 +1,12 @@
 import 'package:ea_kazi/src/common/common_exports.dart';
+import 'package:ea_kazi/src/features/jobs/jobs_exports.dart';
 import 'package:ea_kazi/src/utils/size_config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../constants/constants_exports.dart';
-import '../home/home_screen.dart';
+import '../jobs/presentation/home/home_components/category.dart';
+import '../jobs/presentation/home/home_components/category_item.dart';
 
 class CoursesScreen extends StatelessWidget {
   const CoursesScreen({Key? key}) : super(key: key);
