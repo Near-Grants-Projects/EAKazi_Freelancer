@@ -7,9 +7,9 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 const pages = [
   HomeRoute(),
-  // WalletScreen(),
-  // AlertsScreen(),
-  // ProfileScreen(),
+  WalletRoute(),
+  AlertsRoute(),
+  ProfileRoute(),
 ];
 
 //TODO: [ DefaultEaKaziLayout] I DON'T KNOW IF THIS NAME IS OKAY

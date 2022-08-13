@@ -1,3 +1,4 @@
+import 'package:ea_kazi/src/features/messages_ui_screen.dart/messages_ui_screen.dart';
 import 'package:ea_kazi/src/routes/router.gr.dart';
 import 'package:ea_kazi/src/utils/utils_exports.dart';
 import 'package:flutter/material.dart';
@@ -12,11 +13,12 @@ class EaKazi extends StatelessWidget {
   Widget build(BuildContext context) {
     final appRouter = AppRouter();
     final theme = EaKaziTheme.lightTheme();
-    return MaterialApp.router(
+    return MaterialApp(
       theme: theme,
       debugShowCheckedModeBanner: false,
-      routerDelegate: appRouter.delegate(),
-      routeInformationParser: appRouter.defaultRouteParser(),
+      home: MessagesUIScreen(),
+      // routerDelegate: appRouter.delegate(),
+      // routeInformationParser: appRouter.defaultRouteParser(),
     );
   }
 }

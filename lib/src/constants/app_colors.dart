@@ -13,4 +13,8 @@ class AppColors {
   static const yellow500 = Color(0xFFFFC960);
   static const white500 = Color(0xFFEBF0F3);
   static const white700 = Color(0xFFEFF1F7);
+  static const purpleColor = Color(0XFF595085);
+  static const blue700 = Color(0xFF22215B);
+  static const skillsBgColor = Color(0xFFF5F9F9);
+  static const greenColor = Color(0xFF479696);
 }

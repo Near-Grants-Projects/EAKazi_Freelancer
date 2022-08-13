@@ -1,4 +1,4 @@
-import 'package:ea_kazi/src/constants/constants_exports.dart';
+import 'package:ea_kazi/src/common/common_exports.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -14,11 +14,7 @@ class CourseContentTab extends StatelessWidget {
     return ListView.separated(
       scrollDirection: Axis.vertical,
       itemCount: courseData.length,
-      separatorBuilder: (_, index) => const Divider(
-        height: Sizes.p2,
-        thickness: Sizes.p2,
-        color: AppColors.white700,
-      ),
+      separatorBuilder: (_, index) => const CustomDivider(),
       itemBuilder: (context, index) => ReusableSectionCard(
         section: courseData[index].section,
         title: courseData[index].title,
