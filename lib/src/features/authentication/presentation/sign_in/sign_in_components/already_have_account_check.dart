@@ -1,7 +1,7 @@
+import 'package:ea_kazi/src/constants/constants_exports.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../constants/constants_exports.dart';
 
 class AlreadyHaveAccountCheck extends StatelessWidget {
   const AlreadyHaveAccountCheck({
@@ -38,6 +38,3 @@ class AlreadyHaveAccountCheck extends StatelessWidget {
     );
   }
 }
-
-// AppStrings.signUpBtnText
-// AppStrings.dontHaveAccount

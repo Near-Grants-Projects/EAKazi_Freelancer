@@ -37,6 +37,7 @@ final gapW20 = SizedBox(width: SizeConfig.blockSizeHorizontal * Sizes.p20);
 // const gapW64 = SizedBox(width: Sizes.p64);
 
 /// Constant gap heights
+final gapH1 = SizedBox(height: SizeConfig.blockSizeVertical * 1);
 final gapH2 = SizedBox(height: SizeConfig.blockSizeVertical * Sizes.p2);
 final gapH4 = SizedBox(height: SizeConfig.blockSizeVertical * Sizes.p4);
 final gapH6 = SizedBox(height: SizeConfig.blockSizeVertical * Sizes.p6);

@@ -1,8 +1,6 @@
-
+import 'package:ea_kazi/src/constants/constants_exports.dart';
+import 'package:ea_kazi/src/utils/utils_exports.dart';
 import 'package:flutter/material.dart';
-
-import '../../../../constants/constants_exports.dart';
-import '../../../../utils/utils_exports.dart';
 
 class CustomTextButton extends StatelessWidget {
   const CustomTextButton({
@@ -22,9 +20,10 @@ class CustomTextButton extends StatelessWidget {
         onPressed: onPressed,
         child: Text(
           buttonText,
-          style: Theme.of(context).textTheme.bodyText1!.copyWith(
-            color: AppColors.secondaryColor
-          ),
+          style: Theme.of(context)
+              .textTheme
+              .bodyText1!
+              .copyWith(color: AppColors.secondaryColor),
           textAlign: TextAlign.left,
         ),
       ),

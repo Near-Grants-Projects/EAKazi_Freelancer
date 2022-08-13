@@ -2,6 +2,9 @@ import 'package:ea_kazi/src/routes/router.gr.dart';
 import 'package:ea_kazi/src/utils/utils_exports.dart';
 import 'package:flutter/material.dart';
 
+
+//TODO: REMEBER TO REMOVE VIDEOS FOLDER FROM ASSETS AND PUBSPEC
+
 class EaKazi extends StatelessWidget {
   const EaKazi({Key? key}) : super(key: key);
 
@@ -17,4 +20,3 @@ class EaKazi extends StatelessWidget {
     );
   }
 }
-

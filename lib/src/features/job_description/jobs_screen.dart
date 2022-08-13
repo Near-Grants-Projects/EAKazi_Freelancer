@@ -1,14 +1,10 @@
-
-import 'package:ea_kazi/src/features/jobs/presentation/home/home_components/category_item.dart';
-import 'package:ea_kazi/src/features/jobs/presentation/home/home_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:ea_kazi/src/common/common_exports.dart';
 import 'package:ea_kazi/src/constants/constants_exports.dart';
 import 'package:ea_kazi/src/utils/utils_exports.dart';
 
-import '../jobs/presentation/home/home_components/category.dart';
+import '../jobs&courses/presentation/common/jobs_courses_common_exports.dart';
 
 class JobsScreen extends StatelessWidget {
   const JobsScreen({Key? key}) : super(key: key);

@@ -6,7 +6,7 @@ import 'package:ea_kazi/src/common/common_exports.dart';
 import 'package:ea_kazi/src/constants/constants_exports.dart';
 import 'package:ea_kazi/src/utils/size_config.dart';
 
-import '../courses/courses.dart';
+import '../jobs&courses/presentation/courses/courses_screen.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({Key? key}) : super(key: key);
@@ -68,7 +68,10 @@ class ProfileScreen extends StatelessWidget {
                         ),
                         child: Text(
                           AppStrings.editProfile,
-                          style: Theme.of(context).textTheme.bodyText2!.copyWith(
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodyText2!
+                              .copyWith(
                                 color: const Color(0XFF595085), //TODO: ISSUES
                               ),
                         ),
@@ -156,8 +159,10 @@ class ProfileScreen extends StatelessWidget {
             padding: const EdgeInsets.all(Sizes.p20),
             child: Text(
               AppStrings.portfolioProjects,
-              style:
-                  Theme.of(context).textTheme.subtitle1!.copyWith(color: const Color(0xFF22215B)),
+              style: Theme.of(context)
+                  .textTheme
+                  .subtitle1!
+                  .copyWith(color: const Color(0xFF22215B)),
             ),
           ),
           //TODO: PORTFOLIO PROJECTS
@@ -202,12 +207,13 @@ class ProfileScreen extends StatelessWidget {
                   ),
             ),
           ),
-          const CourseCard(
-            jobType: "Visual Designer Course", //TODO: JOB TYPE
-            companyName: "Jelafrica",
-            difficultyType: "Intermediate",
-            imagePath: AppAssetPaths.googleIcon,
-            altText: "Free",
+          const ReusableCardWidget(
+            imagePath: AppAssetPaths.eaKaziIcon,
+            title: "Jelafrica",
+            subtitle: "Visual Designer Course",
+            altText: "Intermediate",
+            auxilliarytext: "FREE",
+            margin: EdgeInsets.symmetric(horizontal: Sizes.p16),
           ),
           gapH6
         ],

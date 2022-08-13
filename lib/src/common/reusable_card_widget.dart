@@ -31,7 +31,7 @@ class ReusableCardWidget extends StatelessWidget {
       onTap: onPressed,
       child: Container(
         width: double.infinity,
-        padding: kDefaultPadding / Sizes.p2,
+        padding: kDefaultPadding,
         margin: margin,
         decoration: BoxDecoration(
           color: AppColors.scaffoldBgColor,
@@ -71,7 +71,9 @@ class ReusableCardWidget extends StatelessWidget {
                   ),
                   Text(
                     subtitle,
-                    style: Theme.of(context).textTheme.headline6,
+                    style: Theme.of(context).textTheme.subtitle1!.copyWith(
+                          fontWeight: FontWeight.bold,
+                        ),
                   ),
                   Text(
                     altText,

@@ -1,9 +1,8 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:ea_kazi/src/features/courses/courses.dart';
 import 'package:ea_kazi/src/features/features_exports.dart';
 import 'package:ea_kazi/src/features/job_description/jobs_screen.dart';
-// import 'package:ea_kazi/src/features/home/home_screen.dart';
-import 'package:ea_kazi/src/features/jobs/jobs_exports.dart';
+import 'package:ea_kazi/src/features/jobs&courses/jobs_courses_exports.dart';
+
 
 @AdaptiveAutoRouter(
   replaceInRouteName: 'Screen,Route',
@@ -19,6 +18,8 @@ import 'package:ea_kazi/src/features/jobs/jobs_exports.dart';
       page: SignInScreen,
     ),
     AutoRoute(page: CoursesScreen),
+    AutoRoute(page: CourseDetailScreen),
+    AutoRoute(page: CourseVideoScreen),
     AutoRoute(page: JobsScreen),
     AutoRoute(
       initial: true,
@@ -30,27 +31,3 @@ import 'package:ea_kazi/src/features/jobs/jobs_exports.dart';
   ],
 )
 class $AppRouter {}
-
-// const homeRoute = AutoRoute(
-//   page: EmptyRouterScreen,
-//   children: [
-//     AutoRoute(
-//       path: 'courses',
-//       page: CoursesScreen,
-//     ),
-//     AutoRoute(
-//       path: 'jobs',
-//       page: JobsScreen,
-//     ),
-//   ],
-// );
-
-//  AutoRoute(
-//             page: EmptyRouterPage,
-//             children: [
-//           AutoRoute(page: NotificationsView,initial: true,), // need
-//to pass a Class object here ex:  NotificationsView({ this.cable});
-//           AutoRoute(page: InfoView),
-//           AutoRoute(page: NavView),
-
-//         ]),

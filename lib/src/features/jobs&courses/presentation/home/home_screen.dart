@@ -2,7 +2,7 @@ import 'package:ea_kazi/src/common/common_exports.dart';
 import 'package:ea_kazi/src/constants/constants_exports.dart';
 import 'package:flutter/material.dart';
 
-import 'home_components/categories.dart';
+import '../common/jobs_courses_common_exports.dart';
 import 'home_components/get_started_options.dart';
 import 'home_components/recommendation_widget.dart';
 
