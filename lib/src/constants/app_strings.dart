@@ -34,6 +34,7 @@ class AppStrings {
   static const alreadyHaveAccountText = "Already have an account? ";
 
   // *********************************************************/
+  static const successful = "Successful";
   static const assessmentCourse = "Assessment Course";
   static const jobDetails = "Job Details";
   static const jobs = "Jobs";

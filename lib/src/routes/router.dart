@@ -3,7 +3,7 @@ import 'package:ea_kazi/src/features/features_exports.dart';
 import 'package:ea_kazi/src/features/jobs&courses/presentation/alerts_screen.dart';
 import 'package:ea_kazi/src/features/jobs&courses/presentation/jobs/jobs_screen.dart';
 import 'package:ea_kazi/src/features/jobs&courses/jobs_courses_exports.dart';
-import 'package:ea_kazi/src/features/wallet/wallet_screen.dart';
+import 'package:ea_kazi/src/features/wallet/presentation/select_bank_screen.dart';
 
 @AdaptiveAutoRouter(
   replaceInRouteName: 'Screen,Route',
@@ -28,3 +28,7 @@ import 'package:ea_kazi/src/features/wallet/wallet_screen.dart';
   ],
 )
 class $AppRouter {}
+
+// SelectBankScreen
+// EnterPinScreen
+//SuccessfulScreen

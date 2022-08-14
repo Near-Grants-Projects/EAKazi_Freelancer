@@ -5,6 +5,7 @@ class AppColors {
   static const darkColor = Color(0xFF000000);
   static const secondaryColor = Color(0xFF827D7D);
   static const textFormFieldColor = Color(0xFFEEF4FF);
+  static const lightBlueColor = Color(0xFFEEF7FE);
   static const blueColor = Color(0xFF4086F4);
   static const blue500 = Color(0xFF0087FF);
   static const btnColor = Color(0xFF333333);
@@ -17,4 +18,5 @@ class AppColors {
   static const blue700 = Color(0xFF22215B);
   static const skillsBgColor = Color(0xFFF5F9F9);
   static const greenColor = Color(0xFF479696);
+  static const green500 = Color(0xFF34A853);
 }

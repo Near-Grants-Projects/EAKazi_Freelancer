@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 import 'package:ea_kazi/src/common/common_exports.dart';
 import 'package:ea_kazi/src/constants/constants_exports.dart';
-import 'package:ea_kazi/src/utils/utils_exports.dart';
 
 import 'courses_components/course_content_tab.dart';
 import 'courses_components/video_player_widget.dart';

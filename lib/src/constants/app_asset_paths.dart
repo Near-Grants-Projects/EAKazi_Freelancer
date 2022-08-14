@@ -24,6 +24,7 @@ class AppAssetPaths {
   static const machineLearningIcon = "assets/icons/machineLearning.svg";
 
   static const appLogo = "assets/icons/logo.svg";
+  static const checkMarkImage = "assets/images/checkmark.png";
 
   static const sendBtn = "assets/icons/send-alt-filled.svg";
 
