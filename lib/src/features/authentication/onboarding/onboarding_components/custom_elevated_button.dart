@@ -1,10 +1,7 @@
-import 'package:ea_kazi/src/features/authentication/sign_in/sign_up_screen.dart';
+import 'package:auto_route/auto_route.dart';
+import 'package:ea_kazi/src/constants/constants_exports.dart';
 import 'package:flutter/material.dart';
-
-import '../../../../constants/constants_exports.dart';
-
-/// TODO: CHANGE THE MATERIAL PAGE ROUTE TO AUTO ROUTE AND CHECK IF THIS
-/// IS THE FIRST TIME A USER OPENED THE APP
+import 'package:ea_kazi/src/routes/router.gr.dart';
 
 class CustomRoundElevatedButton extends StatelessWidget {
   const CustomRoundElevatedButton({Key? key}) : super(key: key);
@@ -21,12 +18,7 @@ class CustomRoundElevatedButton extends StatelessWidget {
           ),
         ),
         child: const Icon(Icons.arrow_forward),
-        onPressed: () => Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (_) => const SignUpScreen(),
-          ),
-        ), 
+        onPressed: () => context.router.replace(const SignUpRoute()),
       ),
     );
   }

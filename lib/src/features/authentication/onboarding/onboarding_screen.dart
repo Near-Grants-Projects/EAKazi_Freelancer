@@ -9,6 +9,7 @@ import 'onboarding_components/onboarding_content.dart';
 import 'onboarding_components/onboarding_page_data.dart';
 import 'onboarding_components/page_dots.dart';
 
+// TODO:check if first time or not inorder to skip this page
 class OnBoardingScreen extends ConsumerWidget {
   const OnBoardingScreen({Key? key}) : super(key: key);
 
@@ -25,9 +26,8 @@ class OnBoardingScreen extends ConsumerWidget {
         padding: kDefaultPadding,
         child: Column(
           children: [
-            gapH12,
-            SvgPicture.asset(AppAssetPaths.appLogo),
             gapH6,
+            SvgPicture.asset(AppAssetPaths.appLogo),
             Expanded(
               flex: 2,
               child: PageView.builder(
@@ -41,21 +41,21 @@ class OnBoardingScreen extends ConsumerWidget {
                 ),
               ),
             ),
-            Expanded(
-              child: Row(
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: List.generate(
-                      onBoardingData.length,
-                      (index) => PageDots(index: index),
-                    ),
+            gapH2,
+            Row(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: List.generate(
+                    onBoardingData.length,
+                    (index) => PageDots(index: index),
                   ),
-                  const Spacer(),
-                  const CustomRoundElevatedButton()
-                ],
-              ),
+                ),
+                const Spacer(),
+                const CustomRoundElevatedButton()
+              ],
             ),
+            gapH6,
           ],
         ),
       ),

@@ -1,13 +1,12 @@
+import 'package:auto_route/auto_route.dart';
+import 'package:ea_kazi/src/common/common_exports.dart';
+import 'package:ea_kazi/src/constants/constants_exports.dart';
 import 'package:ea_kazi/src/features/home/home_screen.dart';
+import 'package:ea_kazi/src/routes/router.gr.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../../../../common/common_exports.dart';
-import '../../../../constants/constants_exports.dart';
-import 'already_have_account_check.dart';
-import 'custom_text_button.dart';
-import 'custom_textform_field.dart';
-import 'string_validators.dart';
+import 'sign_in_components_exports.dart';
 
 class SignInScreenBody extends StatefulWidget {
   const SignInScreenBody({Key? key}) : super(key: key);
@@ -25,24 +24,8 @@ class _SignInScreenBodyState extends State<SignInScreenBody> {
 
   final _passwordController = TextEditingController();
 
-  // var _submitted = false;
-
   String get email => _emailController.text;
   String get password => _passwordController.text;
-
-  // void _emailEditingComplete(AuthState state) {
-  //   if (state.canSubmitEmail(email)) {
-  //     _node.nextFocus();
-  //   }
-  // }
-
-  // void _passwordEditingComplete(AuthState state) {
-  //   if (!state.canSubmitEmail(email)) {
-  //     _node.previousFocus();
-  //     return;
-  //   }
-  //   // _submit(state);
-  // }
 
   @override
   void dispose() {
@@ -65,7 +48,7 @@ class _SignInScreenBodyState extends State<SignInScreenBody> {
                   padding: kDefaultPadding,
                   decoration: const BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage("assets/images/Rectangle 16.png"),
+                      image: AssetImage(AppAssetPaths.backgroundImage),
                       fit: BoxFit.fill,
                     ),
                   ),
@@ -135,11 +118,8 @@ class _SignInScreenBodyState extends State<SignInScreenBody> {
                       gapH6,
                       PrimaryButton(
                         text: AppStrings.signIn,
-                        onPressed: () => Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (_) => const HomeScreen(),
-                          ),
+                        onPressed: () => context.router.replace(
+                          const HomeRoute(),
                         ),
                         // TODO: IMPLEMENT FORM AUTHENETCIATION
                       ),
@@ -147,8 +127,9 @@ class _SignInScreenBodyState extends State<SignInScreenBody> {
                       AlreadyHaveAccountCheck(
                         accountCheckTitle: AppStrings.dontHaveAccountText,
                         accountCheckNavText: AppStrings.signUpBtnText,
-                        onPressed: () =>
-                            Navigator.pop(context), //TODO: IMPLEMENT NAVIGATION FUNCTIONALITY
+                        onPressed: () => context.router.replace(
+                          const SignUpRoute(),
+                        ),
                       ),
                     ],
                   ),
