@@ -34,6 +34,7 @@ class AppStrings {
   static const alreadyHaveAccountText = "Already have an account? ";
 
   // *********************************************************/
+  static const successful = "Successful";
   static const assessmentCourse = "Assessment Course";
   static const jobDetails = "Job Details";
   static const jobs = "Jobs";
@@ -88,4 +89,8 @@ class AppStrings {
   static const ammount = "Amount";
   static const enterPin = "Enter 4-Digit Pin";
   static const enterPinHelperText = "Enter your 4 digit pin to confirm";
+
+  //***************************** */
+  static const courseContent = "Course Content";
+  static const transcript = "Transcript";
 }

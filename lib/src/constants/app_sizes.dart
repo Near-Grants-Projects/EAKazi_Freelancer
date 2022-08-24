@@ -16,8 +16,10 @@ class Sizes {
   static const p20 = 20.0;
   static const p24 = 24.0;
   static const p32 = 32.0;
+  static const p40 = 40.0;
   static const p48 = 48.0;
   static const p64 = 64.0;
+  static const p80 = 80.0;
   static const p100 = 100.0;
 }
 
@@ -36,6 +38,7 @@ final gapW20 = SizedBox(width: SizeConfig.blockSizeHorizontal * Sizes.p20);
 // const gapW64 = SizedBox(width: Sizes.p64);
 
 /// Constant gap heights
+final gapH1 = SizedBox(height: SizeConfig.blockSizeVertical * 1);
 final gapH2 = SizedBox(height: SizeConfig.blockSizeVertical * Sizes.p2);
 final gapH4 = SizedBox(height: SizeConfig.blockSizeVertical * Sizes.p4);
 final gapH6 = SizedBox(height: SizeConfig.blockSizeVertical * Sizes.p6);
