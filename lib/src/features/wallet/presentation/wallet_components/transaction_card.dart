@@ -22,7 +22,7 @@ class TransactionCard extends StatelessWidget {
       width: double.infinity,
       decoration: BoxDecoration(
         color: AppColors.scaffoldBgColor,
-        boxShadow: defaultBoxShadow,
+        boxShadow: AppConstants.defaultBoxShadow,
         borderRadius: BorderRadius.circular(Sizes.p10),
       ),
       child: Row(
@@ -33,7 +33,7 @@ class TransactionCard extends StatelessWidget {
             width: SizeConfig.blockSizeHorizontal * Sizes.p12,
             decoration: BoxDecoration(
               color: AppColors.scaffoldBgColor,
-              boxShadow: defaultBoxShadow,
+              boxShadow: AppConstants.defaultBoxShadow,
               borderRadius: BorderRadius.circular(Sizes.p24),
             ),
             child: Center(

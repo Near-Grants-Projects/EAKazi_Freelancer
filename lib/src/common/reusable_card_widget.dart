@@ -36,7 +36,7 @@ class ReusableCardWidget extends StatelessWidget {
         decoration: BoxDecoration(
           color: AppColors.scaffoldBgColor,
           borderRadius: BorderRadius.circular(Sizes.p12),
-          boxShadow: defaultBoxShadow,
+          boxShadow: AppConstants.defaultBoxShadow,
         ),
         child: Row(
           children: [

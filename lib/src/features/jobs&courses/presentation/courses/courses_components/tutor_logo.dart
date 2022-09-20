@@ -14,7 +14,7 @@ class TutorLogo extends StatelessWidget {
       decoration: BoxDecoration(
         color: AppColors.scaffoldBgColor,
         borderRadius: BorderRadius.circular(Sizes.p32),
-        boxShadow: defaultBoxShadow,
+        boxShadow: AppConstants.defaultBoxShadow,
       ),
       child: Image.asset("assets/images/j.png"),
     );

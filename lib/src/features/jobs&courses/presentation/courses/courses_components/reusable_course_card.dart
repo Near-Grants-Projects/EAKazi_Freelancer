@@ -18,7 +18,7 @@ class ReusableCourseCard extends StatelessWidget {
         decoration: BoxDecoration(
           color: AppColors.scaffoldBgColor,
           borderRadius: BorderRadius.circular(Sizes.p10),
-          boxShadow: defaultBoxShadow,
+          boxShadow: AppConstants.defaultBoxShadow,
         ),
         child: Row(
           children: [

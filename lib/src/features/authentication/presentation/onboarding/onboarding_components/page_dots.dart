@@ -17,7 +17,7 @@ class PageDots extends ConsumerWidget {
     final pageIndex = ref.watch(pageIndexProvider);
 
     return AnimatedContainer(
-      duration: kAnimationDuration,
+      duration: AppConstants.kAnimationDuration,
       curve: Curves.easeInOut,
       margin: const EdgeInsets.only(right: Sizes.p6),
       padding: const EdgeInsets.all(Sizes.p4),
@@ -31,9 +31,7 @@ class PageDots extends ConsumerWidget {
         height: Sizes.p16,
         width: Sizes.p16,
         decoration: BoxDecoration(
-          color: pageIndex == index
-              ? AppColors.scaffoldBgColor
-              : AppColors.secondaryColor,
+          color: pageIndex == index ? AppColors.scaffoldBgColor : AppColors.secondaryColor,
           borderRadius: BorderRadius.circular(Sizes.p12),
         ),
       ),

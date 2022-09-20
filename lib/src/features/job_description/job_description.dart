@@ -40,7 +40,7 @@ class JobDescriptionScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(
                     SizeConfig.blockSizeVertical * Sizes.p12,
                   ),
-                  boxShadow: defaultBoxShadow,
+                  boxShadow: AppConstants.defaultBoxShadow,
                 ),
                 child: Center(
                   child: Image.asset(
@@ -77,7 +77,7 @@ class JobDescriptionScreen extends StatelessWidget {
             //       decoration: BoxDecoration(
             //         color: AppColors.scaffoldBgColor,
             //         borderRadius: BorderRadius.circular(Sizes.p10),
-            //         boxShadow: defaultBoxShadow,
+            //         boxShadow: AppConstants.defaultBoxShadow,
             //       ),
             //       child: Row(
             //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -96,7 +96,7 @@ class JobDescriptionScreen extends StatelessWidget {
               decoration: BoxDecoration(
                 color: AppColors.scaffoldBgColor,
                 borderRadius: BorderRadius.circular(Sizes.p10),
-                boxShadow: defaultBoxShadow,
+                boxShadow: AppConstants.defaultBoxShadow,
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -183,17 +183,17 @@ class AssesmentSection extends StatelessWidget {
           "Assessment",
           style: Theme.of(context).textTheme.headline6,
         ),
-        Text(
+        const Text(
           "To apply for this job you need to take the assessment course, pass the quiz and get a certificate to proove proficiency.To apply for this job you need to take the assessment course, pass the quiz and get a certificate to prove proficiency.",
         ),
         gapH4,
         OutlinedButton(
           onPressed: () => null,
-          child: Text(
+          child: const Text(
             AppStrings.assessmentQuiz,
           ),
         ),
-        PrimaryButton(
+        const PrimaryButton(
           text: AppStrings.takeCourse,
         )
       ],
@@ -211,18 +211,15 @@ class Labels extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final selectedIndex = ref.watch(indexProvider);
-    void _setIndex(int index) =>
-        ref.watch(indexProvider.notifier).state = index;
+    void _setIndex(int index) => ref.watch(indexProvider.notifier).state = index;
 
     return Column(
       children: [
         AnimatedContainer(
-          duration: kAnimationDuration,
+          duration: AppConstants.kAnimationDuration,
           padding: const EdgeInsets.all(Sizes.p4),
           decoration: BoxDecoration(
-            color: index == selectedIndex
-                ? AppColors.darkColor
-                : Colors.transparent,
+            color: index == selectedIndex ? AppColors.darkColor : Colors.transparent,
             borderRadius: BorderRadius.circular(Sizes.p6),
           ),
           child: TextButton(
@@ -237,7 +234,7 @@ class Labels extends ConsumerWidget {
             ),
           ),
         ),
-        Container(
+        SizedBox(
           height: 500,
           // flex: 2,
           child: PageView.builder(
@@ -248,15 +245,12 @@ class Labels extends ConsumerWidget {
               decoration: BoxDecoration(
                 color: AppColors.scaffoldBgColor,
                 borderRadius: BorderRadius.circular(Sizes.p10),
-                boxShadow: defaultBoxShadow,
+                boxShadow: AppConstants.defaultBoxShadow,
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
-                children: List.generate(
-                  sections.length,
-                  (index) => sections[index]
-                ),
+                children: List.generate(sections.length, (index) => sections[index]),
               ),
             ),
           ),
