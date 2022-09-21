@@ -14,7 +14,7 @@ class ReusableCourseCard extends StatelessWidget {
       //TODO: API IMPLEMENTATION
       child: Container(
         height: Sizes.p100,
-        padding: kDefaultPadding / Sizes.p2,
+        padding: AppConstants.kDefaultPadding / Sizes.p2,
         decoration: BoxDecoration(
           color: AppColors.scaffoldBgColor,
           borderRadius: BorderRadius.circular(Sizes.p10),

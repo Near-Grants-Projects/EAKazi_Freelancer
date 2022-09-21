@@ -22,7 +22,7 @@ class GetStartedWidget extends StatelessWidget {
         onTap: onPressed,
         child: Container(
           width: SizeConfig.blockSizeHorizontal * Sizes.p80,
-          padding: kDefaultPadding, 
+          padding: AppConstants.kDefaultPadding,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(Sizes.p12),
             color: AppColors.blueColor.withOpacity(.2),
@@ -45,7 +45,7 @@ class GetStartedWidget extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  padding: kDefaultPadding,
+                  padding: AppConstants.kDefaultPadding,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     color: AppColors.blueColor.withOpacity(.5),

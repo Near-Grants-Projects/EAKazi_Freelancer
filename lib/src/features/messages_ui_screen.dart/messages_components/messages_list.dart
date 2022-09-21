@@ -13,7 +13,7 @@ class MessagesList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: Padding(
-        padding: kDefaultPadding,
+        padding: AppConstants.kDefaultPadding,
         child: ListView.builder(
           itemCount: demoChatMessages.length,
           itemBuilder: (context, index) => MessageBubble(

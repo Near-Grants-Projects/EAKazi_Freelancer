@@ -8,7 +8,7 @@ class TutorLogo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: kDefaultPadding / Sizes.p2,
+      padding: AppConstants.kDefaultPadding / Sizes.p2,
       height: SizeConfig.blockSizeVertical * Sizes.p6,
       width: SizeConfig.blockSizeHorizontal * Sizes.p12,
       decoration: BoxDecoration(

@@ -18,7 +18,7 @@ class TransactionCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: kDefaultPadding,
+      padding: AppConstants.kDefaultPadding,
       width: double.infinity,
       decoration: BoxDecoration(
         color: AppColors.scaffoldBgColor,
@@ -28,7 +28,7 @@ class TransactionCard extends StatelessWidget {
       child: Row(
         children: [
           Container(
-            padding: kDefaultPadding / Sizes.p2,
+            padding: AppConstants.kDefaultPadding / Sizes.p2,
             height: SizeConfig.blockSizeVertical * Sizes.p6,
             width: SizeConfig.blockSizeHorizontal * Sizes.p12,
             decoration: BoxDecoration(

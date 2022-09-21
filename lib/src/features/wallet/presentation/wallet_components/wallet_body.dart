@@ -13,7 +13,7 @@ class WalletBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: kDefaultPadding,
+      padding: AppConstants.kDefaultPadding,
       child: Column(
         children: [
           const ReusableWidget(

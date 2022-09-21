@@ -1,5 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 
+part 'user_model.g.dart';
+
 @JsonSerializable()
 class UserModel {
   @JsonKey(name: "id")
@@ -15,7 +17,7 @@ class UserModel {
   String email;
 
   @JsonKey(name: 'bio')
-  String bio;
+  String? bio;
 
   @JsonKey(name: "user_role")
   String userRole;

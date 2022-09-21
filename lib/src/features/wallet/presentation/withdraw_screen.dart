@@ -31,7 +31,7 @@ class WithdrawScreen extends ConsumerWidget {
         ),
       ),
       body: Padding(
-        padding: kDefaultPadding,
+        padding: AppConstants.kDefaultPadding,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

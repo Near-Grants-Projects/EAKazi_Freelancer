@@ -31,7 +31,7 @@ class EnterPinScreen extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: kDefaultPadding,
+        padding: AppConstants.kDefaultPadding,
         child: Center(
           child: Column(
             children: [

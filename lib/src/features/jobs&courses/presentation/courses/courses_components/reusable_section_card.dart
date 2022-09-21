@@ -18,7 +18,7 @@ class ReusableSectionCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: kDefaultPadding,
+      margin: AppConstants.kDefaultPadding,
       child: SizedBox(
         width: double.infinity,
         child: Column(

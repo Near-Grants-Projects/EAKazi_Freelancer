@@ -9,7 +9,7 @@ class ProfileDetailsSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: kDefaultPadding,
+      padding: AppConstants.kDefaultPadding,
       child: Row(
         children: [
           //TODO: CHANGE TO NETWORK IMAGE

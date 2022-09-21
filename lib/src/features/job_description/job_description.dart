@@ -26,13 +26,13 @@ class JobDescriptionScreen extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: kDefaultPadding,
+        padding: AppConstants.kDefaultPadding,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Center(
               child: Container(
-                padding: kDefaultPadding,
+                padding: AppConstants.kDefaultPadding,
                 height: SizeConfig.blockSizeVertical * Sizes.p12,
                 width: SizeConfig.blockSizeHorizontal * Sizes.p24,
                 decoration: BoxDecoration(

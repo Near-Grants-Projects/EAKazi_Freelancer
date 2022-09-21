@@ -22,7 +22,7 @@ class WalletActivityButton extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            padding: kDefaultPadding / Sizes.p2,
+            padding: AppConstants.kDefaultPadding / Sizes.p2,
             height: SizeConfig.blockSizeVertical * Sizes.p8,
             width: SizeConfig.blockSizeHorizontal * Sizes.p16,
             decoration: BoxDecoration(

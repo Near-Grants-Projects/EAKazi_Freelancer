@@ -20,7 +20,7 @@ class CourseDetailScreen extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: kDefaultPadding / Sizes.p2,
+          padding: AppConstants.kDefaultPadding / Sizes.p2,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

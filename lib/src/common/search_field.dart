@@ -1,4 +1,3 @@
-import 'package:ea_kazi/src/constants/constants_exports.dart';
 import 'package:flutter/material.dart';
 
 class SearchField extends StatelessWidget {
@@ -11,8 +10,7 @@ class SearchField extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16),
       child: SizedBox(
-
-        // padding: kDefaultPadding, //TODO: CHECK THIS
+        // padding: AppConstants.kDefaultPadding, //TODO: CHECK THIS
         width: double.infinity,
         // decoration: BoxDecoration(
         //   borderRadius: BorderRadius.circular(15),

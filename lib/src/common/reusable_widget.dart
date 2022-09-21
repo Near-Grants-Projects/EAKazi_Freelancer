@@ -14,7 +14,7 @@ class ReusableWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: kDefaultPadding,
+      padding: AppConstants.kDefaultPadding,
       width: double.infinity,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(Sizes.p10),

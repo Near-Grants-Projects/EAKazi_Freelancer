@@ -24,7 +24,7 @@ class JobsScreen extends StatelessWidget {
             const Categories(),
             gapH2,
             ReusableCardWidget(
-              margin: kDefaultPadding / 2,
+              margin: AppConstants.kDefaultPadding / 2,
               imagePath: AppAssetPaths.googleIcon,
               title: "Jelafrica",
               subtitle: "UI/UX Designer",
@@ -38,7 +38,7 @@ class JobsScreen extends StatelessWidget {
               ),
             ),
             ReusableCardWidget(
-              margin: kDefaultPadding / 2,
+              margin: AppConstants.kDefaultPadding / 2,
               imagePath: AppAssetPaths.googleIcon,
               title: "Jelafrica",
               subtitle: "UI/UX Designer",
@@ -46,7 +46,7 @@ class JobsScreen extends StatelessWidget {
               auxilliarytext: "• N200,000",
             ),
             ReusableCardWidget(
-              margin: kDefaultPadding / 2,
+              margin: AppConstants.kDefaultPadding / 2,
               imagePath: AppAssetPaths.googleIcon,
               title: "Jelafrica",
               subtitle: "UI/UX Designer",
@@ -54,7 +54,7 @@ class JobsScreen extends StatelessWidget {
               auxilliarytext: "• N200,000",
             ),
             ReusableCardWidget(
-              margin: kDefaultPadding / 2,
+              margin: AppConstants.kDefaultPadding / 2,
               imagePath: AppAssetPaths.googleIcon,
               title: "Jelafrica",
               subtitle: "UI/UX Designer",
@@ -62,7 +62,7 @@ class JobsScreen extends StatelessWidget {
               auxilliarytext: "• N200,000",
             ),
             ReusableCardWidget(
-              margin: kDefaultPadding / 2,
+              margin: AppConstants.kDefaultPadding / 2,
               imagePath: AppAssetPaths.googleIcon,
               title: "Jelafrica",
               subtitle: "UI/UX Designer",
@@ -70,7 +70,7 @@ class JobsScreen extends StatelessWidget {
               auxilliarytext: "• N200,000",
             ),
             ReusableCardWidget(
-              margin: kDefaultPadding / 2,
+              margin: AppConstants.kDefaultPadding / 2,
               imagePath: AppAssetPaths.googleIcon,
               title: "Jelafrica",
               subtitle: "UI/UX Designer",

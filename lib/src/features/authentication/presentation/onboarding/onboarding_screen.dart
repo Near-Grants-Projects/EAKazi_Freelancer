@@ -23,7 +23,7 @@ class OnBoardingScreen extends ConsumerWidget {
 
     return Scaffold(
       body: Padding(
-        padding: kDefaultPadding,
+        padding: AppConstants.kDefaultPadding,
         child: Column(
           children: [
             gapH6,

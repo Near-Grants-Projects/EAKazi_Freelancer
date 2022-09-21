@@ -23,8 +23,7 @@ class CourseVideoScreen extends StatelessWidget {
       body: Column(
         children: [
           VideoPlayeWidget(
-            videoPlayerController:
-                VideoPlayerController.asset("assets/videos/test(1).mp4"),
+            videoPlayerController: VideoPlayerController.asset("assets/videos/test(1).mp4"),
           ),
           Expanded(
             child: DefaultTabController(
@@ -40,11 +39,11 @@ class CourseVideoScreen extends StatelessWidget {
                       ),
                       tabs: [
                         Padding(
-                          padding: kDefaultPadding / Sizes.p2,
+                          padding: AppConstants.kDefaultPadding / Sizes.p2,
                           child: const Tab(text: AppStrings.courseContent),
                         ),
                         Padding(
-                          padding: kDefaultPadding / Sizes.p2,
+                          padding: AppConstants.kDefaultPadding / Sizes.p2,
                           child: const Tab(text: AppStrings.transcript),
                         ),
                       ],

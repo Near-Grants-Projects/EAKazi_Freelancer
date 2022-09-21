@@ -79,31 +79,32 @@ class AppRouter extends _i5.RootStackRouter {
 
   @override
   List<_i5.RouteConfig> get routes => [
-        _i5.RouteConfig(OnBoardingRoute.name, path: '/on-boarding-screen'),
+        _i5.RouteConfig(OnBoardingRoute.name, path: '/'),
         _i5.RouteConfig(SignUpRoute.name, path: '/sign-up-screen'),
         _i5.RouteConfig(SignInRoute.name, path: '/sign-in-screen'),
         _i5.RouteConfig(CoursesRoute.name, path: '/courses-screen'),
         _i5.RouteConfig(CourseDetailRoute.name, path: '/course-detail-screen'),
         _i5.RouteConfig(CourseVideoRoute.name, path: '/course-video-screen'),
         _i5.RouteConfig(JobsRoute.name, path: '/jobs-screen'),
-        _i5.RouteConfig(DefaultWrapperRoute.name, path: '/', children: [
-          _i5.RouteConfig(HomeRoute.name,
-              path: 'home-screen', parent: DefaultWrapperRoute.name),
-          _i5.RouteConfig(WalletRoute.name,
-              path: 'wallet-screen', parent: DefaultWrapperRoute.name),
-          _i5.RouteConfig(AlertsRoute.name,
-              path: 'alerts-screen', parent: DefaultWrapperRoute.name),
-          _i5.RouteConfig(ProfileRoute.name,
-              path: 'profile-screen', parent: DefaultWrapperRoute.name)
-        ])
+        _i5.RouteConfig(DefaultWrapperRoute.name,
+            path: '/default-wrapper-screen',
+            children: [
+              _i5.RouteConfig(HomeRoute.name,
+                  path: 'home-screen', parent: DefaultWrapperRoute.name),
+              _i5.RouteConfig(WalletRoute.name,
+                  path: 'wallet-screen', parent: DefaultWrapperRoute.name),
+              _i5.RouteConfig(AlertsRoute.name,
+                  path: 'alerts-screen', parent: DefaultWrapperRoute.name),
+              _i5.RouteConfig(ProfileRoute.name,
+                  path: 'profile-screen', parent: DefaultWrapperRoute.name)
+            ])
       ];
 }
 
 /// generated route for
 /// [_i1.OnBoardingScreen]
 class OnBoardingRoute extends _i5.PageRouteInfo<void> {
-  const OnBoardingRoute()
-      : super(OnBoardingRoute.name, path: '/on-boarding-screen');
+  const OnBoardingRoute() : super(OnBoardingRoute.name, path: '/');
 
   static const String name = 'OnBoardingRoute';
 }
@@ -162,7 +163,8 @@ class JobsRoute extends _i5.PageRouteInfo<void> {
 /// [_i2.DefaultWrapperScreen]
 class DefaultWrapperRoute extends _i5.PageRouteInfo<void> {
   const DefaultWrapperRoute({List<_i5.PageRouteInfo>? children})
-      : super(DefaultWrapperRoute.name, path: '/', initialChildren: children);
+      : super(DefaultWrapperRoute.name,
+            path: '/default-wrapper-screen', initialChildren: children);
 
   static const String name = 'DefaultWrapperRoute';
 }

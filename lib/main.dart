@@ -1,4 +1,5 @@
 import 'package:ea_kazi/src/constants/app_colors.dart';
+import 'package:ea_kazi/src/utils/injectable/injectable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -7,6 +8,8 @@ import 'src/app.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  configureDependencies();
 
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,

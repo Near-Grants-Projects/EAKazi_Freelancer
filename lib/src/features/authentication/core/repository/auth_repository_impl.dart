@@ -34,8 +34,8 @@ class AuthRepositoryImpl extends AuthRepository {
 
         case DioErrorType.response:
           throw Failure(
-            errorCode: Failure.somethingWentWrongCode,
-            message: Failure.somethingWentWrongMsg,
+            errorCode: err.response?.statusCode ?? 0,
+            message: err.response?.data['message'],
           );
 
         case DioErrorType.other:

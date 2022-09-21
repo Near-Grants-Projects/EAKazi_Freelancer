@@ -44,7 +44,7 @@ class _SignInScreenBodyState extends State<SignInScreenBody> {
             Stack(
               children: [
                 Container(
-                  padding: kDefaultPadding,
+                  padding: AppConstants.kDefaultPadding,
                   decoration: const BoxDecoration(
                     image: DecorationImage(
                       image: AssetImage(AppAssetPaths.backgroundImage),
@@ -70,7 +70,7 @@ class _SignInScreenBodyState extends State<SignInScreenBody> {
               ],
             ),
             Padding(
-              padding: kDefaultPadding,
+              padding: AppConstants.kDefaultPadding,
               child: FocusScope(
                 node: _node,
                 child: Form(

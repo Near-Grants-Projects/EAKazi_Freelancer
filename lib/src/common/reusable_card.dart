@@ -31,7 +31,7 @@ class ReusableCard extends StatelessWidget {
       onTap: onPressed,
       child: Container(
         width: double.infinity,
-        padding: kDefaultPadding / Sizes.p2,
+        padding: AppConstants.kDefaultPadding / Sizes.p2,
         margin: margin,
         decoration: BoxDecoration(
           color: AppColors.scaffoldBgColor,
@@ -41,7 +41,7 @@ class ReusableCard extends StatelessWidget {
         child: Row(
           children: [
             Container(
-              padding: kDefaultPadding / Sizes.p2,
+              padding: AppConstants.kDefaultPadding / Sizes.p2,
               height: SizeConfig.blockSizeVertical * Sizes.p6,
               width: SizeConfig.blockSizeVertical * Sizes.p6,
               decoration: BoxDecoration(

@@ -12,7 +12,7 @@ class ChatsList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: kDefaultPadding,
+      padding: AppConstants.kDefaultPadding,
       child: ListView.separated(
         primary: false,
         shrinkWrap: true,

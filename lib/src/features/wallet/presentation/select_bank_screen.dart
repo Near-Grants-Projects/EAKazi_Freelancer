@@ -27,7 +27,7 @@ class SelectBankScreen extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: kDefaultPadding,
+          padding: AppConstants.kDefaultPadding,
           child: Column(
             children: [
               const ReusableWidget(

@@ -24,7 +24,7 @@ class PrimaryButton extends StatelessWidget {
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
           onSurface: onSurfaceColor,
-          padding: kDefaultPadding,
+          padding: AppConstants.kDefaultPadding,
         ),
         child: isLoading
             ? const CircularProgressIndicator()
