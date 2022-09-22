@@ -13,8 +13,10 @@ import '../../features/authentication/core/repository/auth_repository.dart'
     as _i4;
 import '../../features/authentication/core/repository/auth_repository_impl.dart'
     as _i5;
+import '../../features/authentication/presentation/sign_in/bloc/sign_in_bloc.dart'
+    as _i6;
 import '../../features/authentication/presentation/sign_up/bloc/sign_up_bloc.dart'
-    as _i6; // ignore_for_file: unnecessary_lambdas
+    as _i7; // ignore_for_file: unnecessary_lambdas
 
 // ignore_for_file: lines_longer_than_80_chars
 /// initializes the registration of provided dependencies inside of [GetIt]
@@ -25,7 +27,8 @@ _i1.GetIt $initGetIt(_i1.GetIt get,
   gh.lazySingleton<_i4.AuthRepository>(
       () => _i5.AuthRepositoryImpl(get<_i3.AuthApiManager>()),
       instanceName: 'default');
-  gh.factory<_i6.SignUpBloc>(
-      () => _i6.SignUpBloc(get<_i4.AuthRepository>(instanceName: 'default')));
+  gh.factory<_i6.SignInBloc>(() => _i6.SignInBloc());
+  gh.factory<_i7.SignUpBloc>(
+      () => _i7.SignUpBloc(get<_i4.AuthRepository>(instanceName: 'default')));
   return get;
 }
