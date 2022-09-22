@@ -62,7 +62,6 @@ class SignUpScreenBody extends StatelessWidget {
                     CustomTextFormField(
                       controller: bloc.nameController,
                       labelText: AppStrings.fullNameText,
-                      //TODO: IMPLEMENT VALIDATORS AND ONCOMPLETE AFTER SETTING UP CONTROLLER
                       inputFormatters: <TextInputFormatter>[
                         ValidatorInputFormatter(
                           editingValidator: NonEmptyStringValidator(),
@@ -82,7 +81,10 @@ class SignUpScreenBody extends StatelessWidget {
                     gapH2,
                     CustomTextFormField(
                       controller: bloc.passwordController,
-                      obscureText: true,
+                      obscureText: state.maybeWhen(
+                        passwordVisibilityToggledState: (isVisible) => isVisible,
+                        orElse: () => true,
+                      ),
                       labelText: AppStrings.passwordText,
                       textInputAction: TextInputAction.done,
                       inputFormatters: <TextInputFormatter>[
@@ -91,12 +93,18 @@ class SignUpScreenBody extends StatelessWidget {
                         ),
                       ],
                       suffixIcon: IconButton(
-                        icon: const Icon(
-                          Icons.visibility,
+                        icon: Icon(
+                          state.maybeWhen(
+                            passwordVisibilityToggledState: (isVisible) =>
+                                isVisible ? Icons.visibility_off : Icons.visibility,
+                            orElse: () => Icons.visibility_off,
+                          ),
                           color: AppColors.secondaryColor,
                         ),
-                        onPressed: () => null,
-                      ), //TODO IMPLEMENT VISIBILITY TOGGLE
+                        onPressed: () {
+                          bloc.add(const SignUpEvent.toggleVisibilityEvent());
+                        },
+                      ),
                     ),
                     gapH6,
                     PrimaryButton(
@@ -109,7 +117,7 @@ class SignUpScreenBody extends StatelessWidget {
                     AlreadyHaveAccountCheck(
                       accountCheckTitle: AppStrings.alreadyHaveAccountText,
                       accountCheckNavText: AppStrings.signIn,
-                      onPressed: () => context.router.replace(
+                      onPressed: () => context.pushRoute(
                         const SignInRoute(),
                       ),
                     ),

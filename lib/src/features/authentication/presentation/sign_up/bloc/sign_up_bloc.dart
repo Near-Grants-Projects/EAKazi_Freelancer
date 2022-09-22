@@ -25,8 +25,16 @@ class SignUpBloc extends Bloc<SignUpEvent, SignUpState> {
 
   final nameController = TextEditingController();
 
+  bool isPasswordVisible = false;
+
   SignUpBloc(@Named(AppConstants.defaultRepositoriesImpl) this._authRepository)
       : super(const _Initial()) {
+    on<_ToggleVisibilityEvent>((event, emit) {
+      isPasswordVisible = !isPasswordVisible;
+
+      emit(_PasswordVisibilityToggledState(isPasswordVisible));
+    });
+
     on<_SignUpUserEvent>((event, emit) async {
       emit(const _LoadingState());
 

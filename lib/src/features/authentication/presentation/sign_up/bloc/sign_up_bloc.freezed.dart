@@ -19,18 +19,21 @@ mixin _$SignUpEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
+    required TResult Function() toggleVisibilityEvent,
     required TResult Function() signUpUserEvent,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? started,
+    TResult Function()? toggleVisibilityEvent,
     TResult Function()? signUpUserEvent,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
+    TResult Function()? toggleVisibilityEvent,
     TResult Function()? signUpUserEvent,
     required TResult orElse(),
   }) =>
@@ -38,18 +41,22 @@ mixin _$SignUpEvent {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
+    required TResult Function(_ToggleVisibilityEvent value)
+        toggleVisibilityEvent,
     required TResult Function(_SignUpUserEvent value) signUpUserEvent,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_Started value)? started,
+    TResult Function(_ToggleVisibilityEvent value)? toggleVisibilityEvent,
     TResult Function(_SignUpUserEvent value)? signUpUserEvent,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
+    TResult Function(_ToggleVisibilityEvent value)? toggleVisibilityEvent,
     TResult Function(_SignUpUserEvent value)? signUpUserEvent,
     required TResult orElse(),
   }) =>
@@ -112,6 +119,7 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
+    required TResult Function() toggleVisibilityEvent,
     required TResult Function() signUpUserEvent,
   }) {
     return started();
@@ -121,6 +129,7 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? started,
+    TResult Function()? toggleVisibilityEvent,
     TResult Function()? signUpUserEvent,
   }) {
     return started?.call();
@@ -130,6 +139,7 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
+    TResult Function()? toggleVisibilityEvent,
     TResult Function()? signUpUserEvent,
     required TResult orElse(),
   }) {
@@ -143,6 +153,8 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
+    required TResult Function(_ToggleVisibilityEvent value)
+        toggleVisibilityEvent,
     required TResult Function(_SignUpUserEvent value) signUpUserEvent,
   }) {
     return started(this);
@@ -152,6 +164,7 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_Started value)? started,
+    TResult Function(_ToggleVisibilityEvent value)? toggleVisibilityEvent,
     TResult Function(_SignUpUserEvent value)? signUpUserEvent,
   }) {
     return started?.call(this);
@@ -161,6 +174,7 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
+    TResult Function(_ToggleVisibilityEvent value)? toggleVisibilityEvent,
     TResult Function(_SignUpUserEvent value)? signUpUserEvent,
     required TResult orElse(),
   }) {
@@ -173,6 +187,119 @@ class _$_Started implements _Started {
 
 abstract class _Started implements SignUpEvent {
   const factory _Started() = _$_Started;
+}
+
+/// @nodoc
+abstract class _$$_ToggleVisibilityEventCopyWith<$Res> {
+  factory _$$_ToggleVisibilityEventCopyWith(_$_ToggleVisibilityEvent value,
+          $Res Function(_$_ToggleVisibilityEvent) then) =
+      __$$_ToggleVisibilityEventCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_ToggleVisibilityEventCopyWithImpl<$Res>
+    extends _$SignUpEventCopyWithImpl<$Res>
+    implements _$$_ToggleVisibilityEventCopyWith<$Res> {
+  __$$_ToggleVisibilityEventCopyWithImpl(_$_ToggleVisibilityEvent _value,
+      $Res Function(_$_ToggleVisibilityEvent) _then)
+      : super(_value, (v) => _then(v as _$_ToggleVisibilityEvent));
+
+  @override
+  _$_ToggleVisibilityEvent get _value =>
+      super._value as _$_ToggleVisibilityEvent;
+}
+
+/// @nodoc
+
+class _$_ToggleVisibilityEvent implements _ToggleVisibilityEvent {
+  const _$_ToggleVisibilityEvent();
+
+  @override
+  String toString() {
+    return 'SignUpEvent.toggleVisibilityEvent()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_ToggleVisibilityEvent);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() toggleVisibilityEvent,
+    required TResult Function() signUpUserEvent,
+  }) {
+    return toggleVisibilityEvent();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? toggleVisibilityEvent,
+    TResult Function()? signUpUserEvent,
+  }) {
+    return toggleVisibilityEvent?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? toggleVisibilityEvent,
+    TResult Function()? signUpUserEvent,
+    required TResult orElse(),
+  }) {
+    if (toggleVisibilityEvent != null) {
+      return toggleVisibilityEvent();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_ToggleVisibilityEvent value)
+        toggleVisibilityEvent,
+    required TResult Function(_SignUpUserEvent value) signUpUserEvent,
+  }) {
+    return toggleVisibilityEvent(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_ToggleVisibilityEvent value)? toggleVisibilityEvent,
+    TResult Function(_SignUpUserEvent value)? signUpUserEvent,
+  }) {
+    return toggleVisibilityEvent?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_ToggleVisibilityEvent value)? toggleVisibilityEvent,
+    TResult Function(_SignUpUserEvent value)? signUpUserEvent,
+    required TResult orElse(),
+  }) {
+    if (toggleVisibilityEvent != null) {
+      return toggleVisibilityEvent(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ToggleVisibilityEvent implements SignUpEvent {
+  const factory _ToggleVisibilityEvent() = _$_ToggleVisibilityEvent;
 }
 
 /// @nodoc
@@ -217,6 +344,7 @@ class _$_SignUpUserEvent implements _SignUpUserEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
+    required TResult Function() toggleVisibilityEvent,
     required TResult Function() signUpUserEvent,
   }) {
     return signUpUserEvent();
@@ -226,6 +354,7 @@ class _$_SignUpUserEvent implements _SignUpUserEvent {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? started,
+    TResult Function()? toggleVisibilityEvent,
     TResult Function()? signUpUserEvent,
   }) {
     return signUpUserEvent?.call();
@@ -235,6 +364,7 @@ class _$_SignUpUserEvent implements _SignUpUserEvent {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
+    TResult Function()? toggleVisibilityEvent,
     TResult Function()? signUpUserEvent,
     required TResult orElse(),
   }) {
@@ -248,6 +378,8 @@ class _$_SignUpUserEvent implements _SignUpUserEvent {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
+    required TResult Function(_ToggleVisibilityEvent value)
+        toggleVisibilityEvent,
     required TResult Function(_SignUpUserEvent value) signUpUserEvent,
   }) {
     return signUpUserEvent(this);
@@ -257,6 +389,7 @@ class _$_SignUpUserEvent implements _SignUpUserEvent {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_Started value)? started,
+    TResult Function(_ToggleVisibilityEvent value)? toggleVisibilityEvent,
     TResult Function(_SignUpUserEvent value)? signUpUserEvent,
   }) {
     return signUpUserEvent?.call(this);
@@ -266,6 +399,7 @@ class _$_SignUpUserEvent implements _SignUpUserEvent {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
+    TResult Function(_ToggleVisibilityEvent value)? toggleVisibilityEvent,
     TResult Function(_SignUpUserEvent value)? signUpUserEvent,
     required TResult orElse(),
   }) {
