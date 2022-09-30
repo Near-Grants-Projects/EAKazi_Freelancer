@@ -72,7 +72,10 @@ class SignInScreenBody extends StatelessWidget {
                           gapH2,
                           CustomTextFormField(
                             controller: bloc.passwordController,
-                            obscureText: true,
+                            obscureText: state.maybeWhen(
+                              passwordVisibilityToggledState: (isVisible) => isVisible,
+                              orElse: () => true,
+                            ),
                             labelText: AppStrings.passwordText,
                             textInputAction: TextInputAction.done,
                             inputFormatters: <TextInputFormatter>[

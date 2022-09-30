@@ -20,7 +20,10 @@ class UserModel {
   String? bio;
 
   @JsonKey(name: "user_role")
-  String userRole;
+  String? userRole;
+
+  @JsonKey(name: "token")
+  String? token;
 
   UserModel({
     required this.id,
@@ -28,7 +31,7 @@ class UserModel {
     required this.lastName,
     required this.email,
     required this.bio,
-    required this.userRole,
+    this.userRole,
   });
 
   factory UserModel.fromJson(Map<String, dynamic> json) => _$UserModelFromJson(json);

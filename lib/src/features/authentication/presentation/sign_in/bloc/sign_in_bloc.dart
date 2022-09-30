@@ -1,11 +1,14 @@
 import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
 import 'package:ea_kazi/src/common/models/failure.dart';
+import 'package:ea_kazi/src/constants/api_constants/base_api_constants.dart';
 import 'package:ea_kazi/src/constants/app_constants.dart';
 import 'package:ea_kazi/src/features/authentication/core/api/signin/request/sign_in_request.dart';
 import 'package:ea_kazi/src/features/authentication/core/api/signin/response/sign_in_response.dart';
 import 'package:ea_kazi/src/features/authentication/core/repository/auth_repository.dart';
+import 'package:ea_kazi/src/utils/ea_kazi_secure_storage.dart/ea_kazi_secure_storage.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 
@@ -26,6 +29,8 @@ class SignInBloc extends Bloc<SignInEvent, SignInState> {
   final passwordController = TextEditingController();
 
   bool isPasswordVisible = false;
+
+  final FlutterSecureStorage _secureStorage = EaKaziSecureStorage.instance;
 
   SignInBloc(@Named(AppConstants.defaultRepositoriesImpl) this._authRepository)
       : super(const _Initial()) {
@@ -49,6 +54,7 @@ class SignInBloc extends Bloc<SignInEvent, SignInState> {
       response.fold((failure) {
         emit(_ErrorState(failure.message, DateTime.now()));
       }, (result) {
+        _secureStorage.write(key: BaseApiConstants.token, value: result.body?.token ?? '');
         emit(const _SuccessState());
       });
     });

@@ -3,6 +3,7 @@ import 'package:ea_kazi/src/features/features_exports.dart';
 import 'package:ea_kazi/src/features/jobs&courses/presentation/alerts_screen.dart';
 import 'package:ea_kazi/src/features/jobs&courses/presentation/jobs/jobs_screen.dart';
 import 'package:ea_kazi/src/features/jobs&courses/jobs_courses_exports.dart';
+import 'package:ea_kazi/src/features/jobs/presentation/home/home_screen.dart';
 
 @AdaptiveAutoRouter(
   replaceInRouteName: 'Screen,Route',

@@ -49,6 +49,7 @@ class SignInScreen extends StatelessWidget {
           });
         },
         child: const Scaffold(
+          resizeToAvoidBottomInset: false,
           body: SignInScreenBody(),
         ),
       ),

@@ -6,11 +6,12 @@ import 'package:flutter/material.dart';
 //TODO: IMPLEMENT API DATA IN REUSABLE WIDGET
 
 class EaKazi extends StatelessWidget {
-  const EaKazi({Key? key}) : super(key: key);
+  EaKazi({Key? key}) : super(key: key);
+
+  final appRouter = AppRouter();
 
   @override
   Widget build(BuildContext context) {
-    final appRouter = AppRouter();
     final theme = EaKaziTheme.lightTheme();
     return MaterialApp.router(
       theme: theme,

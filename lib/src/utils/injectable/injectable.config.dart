@@ -14,9 +14,14 @@ import '../../features/authentication/core/repository/auth_repository.dart'
 import '../../features/authentication/core/repository/auth_repository_impl.dart'
     as _i5;
 import '../../features/authentication/presentation/sign_in/bloc/sign_in_bloc.dart'
-    as _i6;
+    as _i7;
 import '../../features/authentication/presentation/sign_up/bloc/sign_up_bloc.dart'
-    as _i7; // ignore_for_file: unnecessary_lambdas
+    as _i8;
+import '../../features/jobs/core/apis/jobs_api_manager.dart' as _i6;
+import '../../features/jobs/core/repository/jobs_repository.dart' as _i9;
+import '../../features/jobs/core/repository/jobs_repository_impl.dart' as _i10;
+import '../../features/jobs/presentation/home/bloc/home_bloc.dart'
+    as _i11; // ignore_for_file: unnecessary_lambdas
 
 // ignore_for_file: lines_longer_than_80_chars
 /// initializes the registration of provided dependencies inside of [GetIt]
@@ -27,8 +32,15 @@ _i1.GetIt $initGetIt(_i1.GetIt get,
   gh.lazySingleton<_i4.AuthRepository>(
       () => _i5.AuthRepositoryImpl(get<_i3.AuthApiManager>()),
       instanceName: 'default');
-  gh.factory<_i6.SignInBloc>(() => _i6.SignInBloc());
-  gh.factory<_i7.SignUpBloc>(
-      () => _i7.SignUpBloc(get<_i4.AuthRepository>(instanceName: 'default')));
+  gh.lazySingleton<_i6.JobsApiManager>(() => _i6.JobsApiManager.create());
+  gh.factory<_i7.SignInBloc>(
+      () => _i7.SignInBloc(get<_i4.AuthRepository>(instanceName: 'default')));
+  gh.factory<_i8.SignUpBloc>(
+      () => _i8.SignUpBloc(get<_i4.AuthRepository>(instanceName: 'default')));
+  gh.lazySingleton<_i9.JobRepository>(
+      () => _i10.JobRepositoryImpl(get<_i6.JobsApiManager>()),
+      instanceName: 'default');
+  gh.factory<_i11.HomeBloc>(
+      () => _i11.HomeBloc(get<_i9.JobRepository>(instanceName: 'default')));
   return get;
 }

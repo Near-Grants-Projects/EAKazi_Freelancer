@@ -14,4 +14,6 @@ class BaseApiConstants {
   static const String message = 'message';
 
   static const String userIdKey = 'userID';
+
+  static const String token = 'token';
 }
