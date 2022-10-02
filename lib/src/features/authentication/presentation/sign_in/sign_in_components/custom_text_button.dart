@@ -23,7 +23,7 @@ class CustomTextButton extends StatelessWidget {
           style: Theme.of(context)
               .textTheme
               .bodyText1!
-              .copyWith(color: AppColors.secondaryColor),
+              .copyWith(color: AppColors.secondaryColor, fontSize: Sizes.p12),
           textAlign: TextAlign.left,
         ),
       ),

@@ -52,7 +52,7 @@ class EaKaziTheme {
             ),
             button: base.button!.copyWith(
               fontWeight: FontWeight.w600,
-              fontSize: 13,
+              fontSize: 14,
             ),
             caption: base.caption!.copyWith(
               fontWeight: FontWeight.w500,

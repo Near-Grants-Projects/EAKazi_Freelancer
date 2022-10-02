@@ -19,32 +19,38 @@ mixin _$HomeEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
+    required TResult Function() getAllSkillsEvent,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? started,
+    TResult Function()? getAllSkillsEvent,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
+    TResult Function()? getAllSkillsEvent,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
+    required TResult Function(_GetAllSkillsEvent value) getAllSkillsEvent,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_Started value)? started,
+    TResult Function(_GetAllSkillsEvent value)? getAllSkillsEvent,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
+    TResult Function(_GetAllSkillsEvent value)? getAllSkillsEvent,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -105,6 +111,7 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
+    required TResult Function() getAllSkillsEvent,
   }) {
     return started();
   }
@@ -113,6 +120,7 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? started,
+    TResult Function()? getAllSkillsEvent,
   }) {
     return started?.call();
   }
@@ -121,6 +129,7 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
+    TResult Function()? getAllSkillsEvent,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -133,6 +142,7 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
+    required TResult Function(_GetAllSkillsEvent value) getAllSkillsEvent,
   }) {
     return started(this);
   }
@@ -141,6 +151,7 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_Started value)? started,
+    TResult Function(_GetAllSkillsEvent value)? getAllSkillsEvent,
   }) {
     return started?.call(this);
   }
@@ -149,6 +160,7 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
+    TResult Function(_GetAllSkillsEvent value)? getAllSkillsEvent,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -163,10 +175,116 @@ abstract class _Started implements HomeEvent {
 }
 
 /// @nodoc
+abstract class _$$_GetAllSkillsEventCopyWith<$Res> {
+  factory _$$_GetAllSkillsEventCopyWith(_$_GetAllSkillsEvent value,
+          $Res Function(_$_GetAllSkillsEvent) then) =
+      __$$_GetAllSkillsEventCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_GetAllSkillsEventCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res>
+    implements _$$_GetAllSkillsEventCopyWith<$Res> {
+  __$$_GetAllSkillsEventCopyWithImpl(
+      _$_GetAllSkillsEvent _value, $Res Function(_$_GetAllSkillsEvent) _then)
+      : super(_value, (v) => _then(v as _$_GetAllSkillsEvent));
+
+  @override
+  _$_GetAllSkillsEvent get _value => super._value as _$_GetAllSkillsEvent;
+}
+
+/// @nodoc
+
+class _$_GetAllSkillsEvent implements _GetAllSkillsEvent {
+  const _$_GetAllSkillsEvent();
+
+  @override
+  String toString() {
+    return 'HomeEvent.getAllSkillsEvent()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_GetAllSkillsEvent);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() getAllSkillsEvent,
+  }) {
+    return getAllSkillsEvent();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? getAllSkillsEvent,
+  }) {
+    return getAllSkillsEvent?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? getAllSkillsEvent,
+    required TResult orElse(),
+  }) {
+    if (getAllSkillsEvent != null) {
+      return getAllSkillsEvent();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_GetAllSkillsEvent value) getAllSkillsEvent,
+  }) {
+    return getAllSkillsEvent(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_GetAllSkillsEvent value)? getAllSkillsEvent,
+  }) {
+    return getAllSkillsEvent?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_GetAllSkillsEvent value)? getAllSkillsEvent,
+    required TResult orElse(),
+  }) {
+    if (getAllSkillsEvent != null) {
+      return getAllSkillsEvent(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetAllSkillsEvent implements HomeEvent {
+  const factory _GetAllSkillsEvent() = _$_GetAllSkillsEvent;
+}
+
+/// @nodoc
 mixin _$HomeState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function() loading,
     required TResult Function(List<JobsModel> response) loadedState,
     required TResult Function(String message, DateTime dateTime) errorState,
   }) =>
@@ -174,6 +292,7 @@ mixin _$HomeState {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? loading,
     TResult Function(List<JobsModel> response)? loadedState,
     TResult Function(String message, DateTime dateTime)? errorState,
   }) =>
@@ -181,6 +300,7 @@ mixin _$HomeState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? loading,
     TResult Function(List<JobsModel> response)? loadedState,
     TResult Function(String message, DateTime dateTime)? errorState,
     required TResult orElse(),
@@ -189,6 +309,7 @@ mixin _$HomeState {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
     required TResult Function(_LoadedState value) loadedState,
     required TResult Function(_ErrorState value) errorState,
   }) =>
@@ -196,6 +317,7 @@ mixin _$HomeState {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
     TResult Function(_LoadedState value)? loadedState,
     TResult Function(_ErrorState value)? errorState,
   }) =>
@@ -203,6 +325,7 @@ mixin _$HomeState {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
     TResult Function(_LoadedState value)? loadedState,
     TResult Function(_ErrorState value)? errorState,
     required TResult orElse(),
@@ -265,6 +388,7 @@ class _$_Initial implements _Initial {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function() loading,
     required TResult Function(List<JobsModel> response) loadedState,
     required TResult Function(String message, DateTime dateTime) errorState,
   }) {
@@ -275,6 +399,7 @@ class _$_Initial implements _Initial {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? loading,
     TResult Function(List<JobsModel> response)? loadedState,
     TResult Function(String message, DateTime dateTime)? errorState,
   }) {
@@ -285,6 +410,7 @@ class _$_Initial implements _Initial {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? loading,
     TResult Function(List<JobsModel> response)? loadedState,
     TResult Function(String message, DateTime dateTime)? errorState,
     required TResult orElse(),
@@ -299,6 +425,7 @@ class _$_Initial implements _Initial {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
     required TResult Function(_LoadedState value) loadedState,
     required TResult Function(_ErrorState value) errorState,
   }) {
@@ -309,6 +436,7 @@ class _$_Initial implements _Initial {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
     TResult Function(_LoadedState value)? loadedState,
     TResult Function(_ErrorState value)? errorState,
   }) {
@@ -319,6 +447,7 @@ class _$_Initial implements _Initial {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
     TResult Function(_LoadedState value)? loadedState,
     TResult Function(_ErrorState value)? errorState,
     required TResult orElse(),
@@ -332,6 +461,121 @@ class _$_Initial implements _Initial {
 
 abstract class _Initial implements HomeState {
   const factory _Initial() = _$_Initial;
+}
+
+/// @nodoc
+abstract class _$$_LoadingCopyWith<$Res> {
+  factory _$$_LoadingCopyWith(
+          _$_Loading value, $Res Function(_$_Loading) then) =
+      __$$_LoadingCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_LoadingCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
+    implements _$$_LoadingCopyWith<$Res> {
+  __$$_LoadingCopyWithImpl(_$_Loading _value, $Res Function(_$_Loading) _then)
+      : super(_value, (v) => _then(v as _$_Loading));
+
+  @override
+  _$_Loading get _value => super._value as _$_Loading;
+}
+
+/// @nodoc
+
+class _$_Loading implements _Loading {
+  const _$_Loading();
+
+  @override
+  String toString() {
+    return 'HomeState.loading()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_Loading);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<JobsModel> response) loadedState,
+    required TResult Function(String message, DateTime dateTime) errorState,
+  }) {
+    return loading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<JobsModel> response)? loadedState,
+    TResult Function(String message, DateTime dateTime)? errorState,
+  }) {
+    return loading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<JobsModel> response)? loadedState,
+    TResult Function(String message, DateTime dateTime)? errorState,
+    required TResult orElse(),
+  }) {
+    if (loading != null) {
+      return loading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_LoadedState value) loadedState,
+    required TResult Function(_ErrorState value) errorState,
+  }) {
+    return loading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_LoadedState value)? loadedState,
+    TResult Function(_ErrorState value)? errorState,
+  }) {
+    return loading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_LoadedState value)? loadedState,
+    TResult Function(_ErrorState value)? errorState,
+    required TResult orElse(),
+  }) {
+    if (loading != null) {
+      return loading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Loading implements HomeState {
+  const factory _Loading() = _$_Loading;
 }
 
 /// @nodoc
@@ -403,6 +647,7 @@ class _$_LoadedState implements _LoadedState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function() loading,
     required TResult Function(List<JobsModel> response) loadedState,
     required TResult Function(String message, DateTime dateTime) errorState,
   }) {
@@ -413,6 +658,7 @@ class _$_LoadedState implements _LoadedState {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? loading,
     TResult Function(List<JobsModel> response)? loadedState,
     TResult Function(String message, DateTime dateTime)? errorState,
   }) {
@@ -423,6 +669,7 @@ class _$_LoadedState implements _LoadedState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? loading,
     TResult Function(List<JobsModel> response)? loadedState,
     TResult Function(String message, DateTime dateTime)? errorState,
     required TResult orElse(),
@@ -437,6 +684,7 @@ class _$_LoadedState implements _LoadedState {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
     required TResult Function(_LoadedState value) loadedState,
     required TResult Function(_ErrorState value) errorState,
   }) {
@@ -447,6 +695,7 @@ class _$_LoadedState implements _LoadedState {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
     TResult Function(_LoadedState value)? loadedState,
     TResult Function(_ErrorState value)? errorState,
   }) {
@@ -457,6 +706,7 @@ class _$_LoadedState implements _LoadedState {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
     TResult Function(_LoadedState value)? loadedState,
     TResult Function(_ErrorState value)? errorState,
     required TResult orElse(),
@@ -552,6 +802,7 @@ class _$_ErrorState implements _ErrorState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function() loading,
     required TResult Function(List<JobsModel> response) loadedState,
     required TResult Function(String message, DateTime dateTime) errorState,
   }) {
@@ -562,6 +813,7 @@ class _$_ErrorState implements _ErrorState {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? loading,
     TResult Function(List<JobsModel> response)? loadedState,
     TResult Function(String message, DateTime dateTime)? errorState,
   }) {
@@ -572,6 +824,7 @@ class _$_ErrorState implements _ErrorState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? loading,
     TResult Function(List<JobsModel> response)? loadedState,
     TResult Function(String message, DateTime dateTime)? errorState,
     required TResult orElse(),
@@ -586,6 +839,7 @@ class _$_ErrorState implements _ErrorState {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
     required TResult Function(_LoadedState value) loadedState,
     required TResult Function(_ErrorState value) errorState,
   }) {
@@ -596,6 +850,7 @@ class _$_ErrorState implements _ErrorState {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
     TResult Function(_LoadedState value)? loadedState,
     TResult Function(_ErrorState value)? errorState,
   }) {
@@ -606,6 +861,7 @@ class _$_ErrorState implements _ErrorState {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
     TResult Function(_LoadedState value)? loadedState,
     TResult Function(_ErrorState value)? errorState,
     required TResult orElse(),

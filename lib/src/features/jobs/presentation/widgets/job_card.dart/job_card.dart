@@ -1,4 +1,4 @@
-import 'package:ea_kazi/src/features/jobs/core/models/jobs_model.dart';
+import 'package:ea_kazi/src/features/jobs/core/models/jobs_model/jobs_model.dart';
 import 'package:flutter/material.dart';
 import 'package:ea_kazi/src/constants/constants_exports.dart';
 import 'package:ea_kazi/src/utils/utils_exports.dart';

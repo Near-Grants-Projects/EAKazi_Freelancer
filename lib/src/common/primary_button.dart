@@ -31,7 +31,7 @@ class PrimaryButton extends StatelessWidget {
             : Text(
                 text,
                 textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.headline6!.copyWith(
+                style: Theme.of(context).textTheme.button!.copyWith(
                       color: AppColors.scaffoldBgColor,
                     ),
               ),

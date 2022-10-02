@@ -8,7 +8,7 @@ class AppStrings {
   static const emailAddressText = "Email address";
   static const passwordText = "Password";
   static const signUpSubtitleText =
-      "Welcome back to EA Kazi\nComplete courses, Get trained and certified by\nexperts on the platform";
+      "Welcome back to EA Kazi\nComplete courses, Get trained and certified by experts on the platform";
   static const firstPageHeadingText = "Get trained and certified by Experts";
   static const secondPageHeadingText = "Bid on Jobs";
   static const thirdPageHeadingText = "Get paid in your local currency";

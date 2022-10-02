@@ -2,8 +2,6 @@ import 'package:ea_kazi/src/constants/constants_exports.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-
-
 class CustomTextFormField extends StatelessWidget {
   const CustomTextFormField({
     Key? key,
@@ -58,7 +56,8 @@ class CustomTextFormField extends StatelessWidget {
             border: InputBorder.none,
             labelText: labelText,
             labelStyle: Theme.of(context).textTheme.subtitle1!.copyWith(
-                  color: AppColors.secondaryColor,
+                  color: Colors.black.withOpacity(0.3),
+                  fontSize: Sizes.p14,
                 ),
           ),
         ),

@@ -15,6 +15,8 @@ class SignUpScreenBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final textTheme = Theme.of(context).textTheme;
+
     return BlocBuilder<SignUpBloc, SignUpState>(
       builder: (context, state) {
         final SignUpBloc bloc = BlocProvider.of<SignUpBloc>(context);
@@ -29,27 +31,23 @@ class SignUpScreenBody extends StatelessWidget {
                   image: AssetImage(AppAssetPaths.backgroundImage),
                 ),
               ),
-              child: Stack(
-                children: [
-                  Padding(
-                    padding: AppConstants.kDefaultPadding,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        gapH8,
-                        Text(
-                          AppStrings.signUp,
-                          style: Theme.of(context).textTheme.headline4,
-                        ),
-                        gapH2,
-                        Text(
-                          AppStrings.signUpSubtitleText,
-                          style: Theme.of(context).textTheme.subtitle1,
-                        ),
-                      ],
+              child: Padding(
+                padding: const EdgeInsets.all(Sizes.p24),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    gapH8,
+                    Text(
+                      AppStrings.signUp,
+                      style: textTheme.headline3!.copyWith(fontSize: Sizes.p28),
                     ),
-                  ),
-                ],
+                    gapH2,
+                    Text(
+                      AppStrings.signUpSubtitleText,
+                      style: textTheme.subtitle1!.copyWith(fontSize: Sizes.p14),
+                    ),
+                  ],
+                ),
               ),
             ),
             Padding(

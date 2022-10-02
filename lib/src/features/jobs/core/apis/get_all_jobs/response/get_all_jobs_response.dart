@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import 'package:ea_kazi/src/features/jobs/core/models/jobs_model.dart';
+import 'package:ea_kazi/src/features/jobs/core/models/jobs_model/jobs_model.dart';
 
 part 'get_all_jobs_response.g.dart';
 

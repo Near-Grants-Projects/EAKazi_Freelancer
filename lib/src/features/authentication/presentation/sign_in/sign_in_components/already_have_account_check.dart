@@ -2,7 +2,6 @@ import 'package:ea_kazi/src/constants/constants_exports.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
-
 class AlreadyHaveAccountCheck extends StatelessWidget {
   const AlreadyHaveAccountCheck({
     Key? key,
@@ -19,15 +18,15 @@ class AlreadyHaveAccountCheck extends StatelessWidget {
   Widget build(BuildContext context) {
     return RichText(
       text: TextSpan(
-        style: Theme.of(context).textTheme.button!.copyWith(
-              fontSize: Sizes.p14,
-              color: AppColors.secondaryColor
-            ),
+        style: Theme.of(context)
+            .textTheme
+            .overline!
+            .copyWith(fontSize: Sizes.p14, color: AppColors.secondaryColor),
         children: [
           TextSpan(text: accountCheckTitle),
           TextSpan(
             text: accountCheckNavText,
-            style: Theme.of(context).textTheme.bodyText1?.copyWith(
+            style: Theme.of(context).textTheme.overline?.copyWith(
                   fontSize: Sizes.p14,
                   color: AppColors.blueColor,
                 ),
