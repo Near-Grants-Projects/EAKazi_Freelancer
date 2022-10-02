@@ -1,3 +1,4 @@
+import 'package:ea_kazi/src/constants/constants_exports.dart';
 import 'package:flutter/material.dart';
 
 class SearchField extends StatelessWidget {
@@ -7,38 +8,29 @@ class SearchField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16),
-      child: SizedBox(
-        // padding: AppConstants.kDefaultPadding, //TODO: CHECK THIS
-        width: double.infinity,
-        // decoration: BoxDecoration(
-        //   borderRadius: BorderRadius.circular(15),
-        // ),
-        child: TextField(
-          onChanged: (value) => print(value),
-          decoration: const InputDecoration(
-            // contentPadding: EdgeInsets.symmetric(
-            //     horizontal: getProportionateScreenWidth(20),
-            //     vertical: getProportionateScreenWidth(9)),
-            border: OutlineInputBorder(
-                // borderRadius: BorderRadius.all(
-                //   Radius.circular(5),
-                // ),
-                ),
-            focusedBorder: OutlineInputBorder(
-                // borderRadius: BorderRadius.all(
-                // Radius.circular(5),
-                // ),
-                ),
-            enabledBorder: OutlineInputBorder(
-                // borderRadius: BorderRadius.all(
-                //   Radius.circular(5),
-                // ),
-                ),
-            hintText: "e.g Game development jobs... ",
-            suffixIcon: Icon(Icons.search),
-          ),
+    return TextField(
+      onChanged: (value) => print(value),
+      cursorColor: AppColors.lightGrey,
+      decoration: const InputDecoration(
+        hintStyle: TextStyle(
+          fontSize: Sizes.p14,
+          fontWeight: FontWeight.w500,
+          color: AppColors.lightGrey,
+        ),
+        contentPadding: EdgeInsets.symmetric(horizontal: Sizes.p16, vertical: Sizes.p12),
+        border: OutlineInputBorder(
+          borderSide: BorderSide(color: AppColors.lightGrey),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderSide: BorderSide(color: AppColors.lightGrey),
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderSide: BorderSide(color: AppColors.lightGrey),
+        ),
+        hintText: "e.g Game development jobs... ",
+        suffixIcon: Icon(
+          Icons.search,
+          color: AppColors.lightGrey,
         ),
       ),
     );

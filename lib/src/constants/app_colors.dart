@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AppColors {
-  static const scaffoldBgColor = Color(0xFFFFFFFF);
+  static const scaffoldBgColor = Color.fromRGBO(251, 253, 255, 1);
   static const darkColor = Color(0xFF000000);
   static const secondaryColor = Color(0xFF827D7D);
   static const textFormFieldColor = Color(0xFFEEF4FF);
@@ -19,4 +19,8 @@ class AppColors {
   static const skillsBgColor = Color(0xFFF5F9F9);
   static const greenColor = Color(0xFF479696);
   static const green500 = Color(0xFF34A853);
+
+  static const Color lightGrey = Color.fromRGBO(159, 165, 170, 1);
+
+  static const Color jobCardShadowColor = Color.fromRGBO(88, 124, 244, 0.17);
 }

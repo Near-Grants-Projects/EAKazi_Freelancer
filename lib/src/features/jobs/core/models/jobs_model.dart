@@ -25,6 +25,9 @@ class JobsModel {
   @JsonKey(name: 'expires_at')
   String? expiresAt;
 
+  @JsonKey(name: 'created_at')
+  String createdAt;
+
   JobsModel({
     required this.id,
     required this.recruiterId,
@@ -32,6 +35,7 @@ class JobsModel {
     required this.status,
     required this.title,
     required this.description,
+    required this.createdAt,
     this.expiresAt,
   });
 

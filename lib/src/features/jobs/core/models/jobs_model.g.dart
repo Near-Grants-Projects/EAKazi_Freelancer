@@ -13,6 +13,7 @@ JobsModel _$JobsModelFromJson(Map<String, dynamic> json) => JobsModel(
       status: json['status'] as String,
       title: json['title'] as String,
       description: json['description'] as String,
+      createdAt: json['created_at'] as String,
       expiresAt: json['expires_at'] as String?,
     );
 
@@ -24,4 +25,5 @@ Map<String, dynamic> _$JobsModelToJson(JobsModel instance) => <String, dynamic>{
       'title': instance.title,
       'description': instance.description,
       'expires_at': instance.expiresAt,
+      'created_at': instance.createdAt,
     };

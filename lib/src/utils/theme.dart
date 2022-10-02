@@ -27,7 +27,7 @@ class EaKaziTheme {
               fontSize: 34,
             ),
             headline5: base.headline5!.copyWith(
-              fontWeight: FontWeight.w600,
+              fontWeight: FontWeight.w500,
               fontSize: 24,
             ),
             headline6: base.headline6!.copyWith(
@@ -63,9 +63,7 @@ class EaKaziTheme {
               fontSize: 12,
             ),
           )
-          .apply(
-              bodyColor: AppColors.darkColor,
-              displayColor: AppColors.darkColor),
+          .apply(bodyColor: AppColors.darkColor, displayColor: AppColors.darkColor),
     );
   }
 
@@ -77,11 +75,8 @@ class EaKaziTheme {
         elevation: 0,
       ),
       textTheme: _buildEaKaziTextTheme(ThemeData.light().textTheme),
-      // primaryColor: AppColors.travexPrimaryColor,
-      // primaryIconTheme: _customIconTheme(ThemeData.light().iconTheme),
-      scaffoldBackgroundColor: AppColors.scaffoldBgColor, // TODO:
-      primaryTextTheme:
-          _buildEaKaziTextTheme(ThemeData.light().primaryTextTheme),
+      scaffoldBackgroundColor: AppColors.scaffoldBgColor,
+      primaryTextTheme: _buildEaKaziTextTheme(ThemeData.light().primaryTextTheme),
     );
   }
 }

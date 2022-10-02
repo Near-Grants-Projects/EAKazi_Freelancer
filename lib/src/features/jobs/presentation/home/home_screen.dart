@@ -2,6 +2,7 @@ import 'package:ea_kazi/src/common/common_exports.dart';
 import 'package:ea_kazi/src/constants/constants_exports.dart';
 import 'package:ea_kazi/src/features/jobs&courses/presentation/common/categories.dart';
 import 'package:ea_kazi/src/features/jobs/presentation/home/bloc/home_bloc.dart';
+import 'package:ea_kazi/src/features/jobs/presentation/widgets/job_card.dart/job_card.dart';
 import 'package:ea_kazi/src/utils/injectable/injectable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -22,59 +23,63 @@ class HomeScreen extends StatelessWidget {
         listener: (context, state) {
           // TODO: implement listener
         },
+        buildWhen: (oldState, newState) {
+          return newState.maybeWhen(
+            loadedState: (jobs) => true,
+            orElse: () => false,
+          );
+        },
         builder: (context, state) {
-          return Scaffold(
-            appBar: AppBar(
-              title: Text(
-                "Hi, Test",
-                style: Theme.of(context).textTheme.headline5,
-              ),
-            ),
-            body: SingleChildScrollView(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const SearchField(),
-                  gapH2,
-                  const GetStartedOptions(),
-                  gapH2,
-                  const Categories(),
-                  const RecommendationWidget(),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: Sizes.p16),
+          return state.maybeWhen(
+            loadedState: (jobs) {
+              return Scaffold(
+                appBar: AppBar(
+                  title: Row(
+                    children: [
+                      Text(
+                        "Hi, Test",
+                        textAlign: TextAlign.left,
+                        style: Theme.of(context).textTheme.headline5,
+                      ),
+                    ],
+                  ),
+                ),
+                body: SingleChildScrollView(
+                  child: Padding(
+                    padding: const EdgeInsets.only(bottom: Sizes.p20),
                     child: Column(
-                      mainAxisSize: MainAxisSize.min,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const ReusableCardWidget(
-                          imagePath: AppAssetPaths.googleIcon,
-                          title: "Google",
-                          subtitle: "Visual Designer - UI Designer",
-                          altText: "Remote",
-                          auxilliarytext: "3hrs ago •",
+                        const Padding(
+                          padding: EdgeInsets.symmetric(horizontal: Sizes.p16),
+                          child: SearchField(),
                         ),
                         gapH2,
-                        const ReusableCardWidget(
-                          imagePath: "assets/icons/eapesa.svg",
-                          title: "EA Pesa",
-                          subtitle: "Visual Designer - UI Designer",
-                          altText: "Mwanza, Tanzania • Full Time",
-                          auxilliarytext: "3hrs ago •",
-                        ),
+                        const GetStartedOptions(),
                         gapH2,
-                        const ReusableCardWidget(
-                          imagePath: "assets/icons/eakazi.svg",
-                          title: "EA Kazi",
-                          subtitle: "Visual Designer - UI Designer",
-                          altText: "Nairobi, Kenya • Full Time",
-                          auxilliarytext: "3hrs ago •",
+                        const Categories(),
+                        const RecommendationWidget(),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: Sizes.p16),
+                          child: ListView.separated(
+                            shrinkWrap: true,
+                            itemCount: jobs.length,
+                            primary: false,
+                            itemBuilder: (context, index) {
+                              return JobCard(job: jobs[index]);
+                            },
+                            separatorBuilder: (context, index) {
+                              return gapH4;
+                            },
+                          ),
                         ),
-                        gapH6,
                       ],
                     ),
                   ),
-                ],
-              ),
-            ),
+                ),
+              );
+            },
+            orElse: () => Container(),
           );
         },
       ),

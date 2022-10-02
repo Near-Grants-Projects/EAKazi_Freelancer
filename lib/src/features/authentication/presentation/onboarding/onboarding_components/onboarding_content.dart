@@ -15,6 +15,7 @@ class OnBoardingContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final textTheme = Theme.of(context).textTheme;
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
@@ -24,15 +25,15 @@ class OnBoardingContent extends StatelessWidget {
         Text(
           heading,
           textAlign: TextAlign.center,
-          style: Theme.of(context).textTheme.headline5,
+          style: textTheme.headline5!.copyWith(),
         ),
         gapH2,
         Text(
           subHeading,
           textAlign: TextAlign.center,
-          style: Theme.of(context).textTheme.headline6!.copyWith(
-                color: AppColors.secondaryColor,
-              ),
+          style: textTheme.bodyText2!.copyWith(
+            color: AppColors.secondaryColor,
+          ),
         ),
       ],
     );
