@@ -25,13 +25,21 @@ class HomeScreen extends StatelessWidget {
         },
         buildWhen: (oldState, newState) {
           return newState.maybeWhen(
-            loadedState: (jobs) => true,
+            loadedState: (jobs, skills) => true,
+            loading: () => true,
             orElse: () => false,
           );
         },
         builder: (context, state) {
           return state.maybeWhen(
-            loadedState: (jobs) {
+            loading: () => const Center(
+              child: SizedBox(
+                height: Sizes.p24,
+                width: Sizes.p24,
+                child: CircularProgressIndicator(),
+              ),
+            ),
+            loadedState: (jobs, skills) {
               return Scaffold(
                 appBar: AppBar(
                   title: Row(
@@ -57,7 +65,7 @@ class HomeScreen extends StatelessWidget {
                         gapH2,
                         const GetStartedOptions(),
                         gapH2,
-                        const Categories(),
+                        Categories(skills: skills),
                         const RecommendationWidget(),
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: Sizes.p16),

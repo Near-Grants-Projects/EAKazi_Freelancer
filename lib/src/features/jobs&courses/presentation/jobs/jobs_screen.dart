@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:ea_kazi/src/common/common_exports.dart';
 import 'package:ea_kazi/src/constants/constants_exports.dart';
 
-import '../common/jobs_courses_common_exports.dart';
-
 class JobsScreen extends StatelessWidget {
   const JobsScreen({Key? key}) : super(key: key);
 
@@ -21,7 +19,7 @@ class JobsScreen extends StatelessWidget {
           children: [
             const SearchField(),
             gapH2,
-            const Categories(),
+            // const Categories(),
             gapH2,
             ReusableCardWidget(
               margin: AppConstants.kDefaultPadding / 2,

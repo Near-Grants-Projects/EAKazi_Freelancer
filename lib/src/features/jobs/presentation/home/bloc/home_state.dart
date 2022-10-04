@@ -6,7 +6,7 @@ class HomeState with _$HomeState {
 
   const factory HomeState.loading() = _Loading;
 
-  const factory HomeState.loadedState(List<JobsModel> response) = _LoadedState;
+  const factory HomeState.loadedState(List<JobsModel> jobs, List<SkillModel> skills) = _LoadedState;
 
   const factory HomeState.errorState(String message, DateTime dateTime) = _ErrorState;
 }

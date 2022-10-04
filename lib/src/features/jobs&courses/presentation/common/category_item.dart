@@ -1,6 +1,5 @@
 import 'package:ea_kazi/src/constants/constants_exports.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class CategoryItem extends StatelessWidget {
   const CategoryItem({
@@ -29,7 +28,7 @@ class CategoryItem extends StatelessWidget {
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            SvgPicture.asset(imagePath),
+            // Image.network(imagePath),
             gapW2,
             Text(
               title,

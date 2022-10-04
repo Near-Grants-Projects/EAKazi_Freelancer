@@ -10,7 +10,7 @@ part of 'jobs_api_manager.dart';
 
 class _JobsApiManager implements JobsApiManager {
   _JobsApiManager(this._dio, {this.baseUrl}) {
-    baseUrl ??= 'https://ea-kazi.herokuapp.com/api/v1//jobs';
+    baseUrl ??= 'https://ea-kazi.herokuapp.com/api/v1/';
   }
 
   final Dio _dio;
@@ -26,10 +26,26 @@ class _JobsApiManager implements JobsApiManager {
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<GetAllJobsResponse>(
             Options(method: 'GET', headers: _headers, extra: _extra)
-                .compose(_dio.options, '',
+                .compose(_dio.options, '/jobs',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     final value = GetAllJobsResponse.fromJson(_result.data!);
+    return value;
+  }
+
+  @override
+  Future<GetAllSkillsResponse> getAllSkills() async {
+    const _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final _data = <String, dynamic>{};
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<GetAllSkillsResponse>(
+            Options(method: 'GET', headers: _headers, extra: _extra)
+                .compose(_dio.options, '/skills',
+                    queryParameters: queryParameters, data: _data)
+                .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+    final value = GetAllSkillsResponse.fromJson(_result.data!);
     return value;
   }
 

@@ -285,7 +285,8 @@ mixin _$HomeState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<JobsModel> response) loadedState,
+    required TResult Function(List<JobsModel> jobs, List<SkillModel> skills)
+        loadedState,
     required TResult Function(String message, DateTime dateTime) errorState,
   }) =>
       throw _privateConstructorUsedError;
@@ -293,7 +294,8 @@ mixin _$HomeState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<JobsModel> response)? loadedState,
+    TResult Function(List<JobsModel> jobs, List<SkillModel> skills)?
+        loadedState,
     TResult Function(String message, DateTime dateTime)? errorState,
   }) =>
       throw _privateConstructorUsedError;
@@ -301,7 +303,8 @@ mixin _$HomeState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<JobsModel> response)? loadedState,
+    TResult Function(List<JobsModel> jobs, List<SkillModel> skills)?
+        loadedState,
     TResult Function(String message, DateTime dateTime)? errorState,
     required TResult orElse(),
   }) =>
@@ -389,7 +392,8 @@ class _$_Initial implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<JobsModel> response) loadedState,
+    required TResult Function(List<JobsModel> jobs, List<SkillModel> skills)
+        loadedState,
     required TResult Function(String message, DateTime dateTime) errorState,
   }) {
     return initial();
@@ -400,7 +404,8 @@ class _$_Initial implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<JobsModel> response)? loadedState,
+    TResult Function(List<JobsModel> jobs, List<SkillModel> skills)?
+        loadedState,
     TResult Function(String message, DateTime dateTime)? errorState,
   }) {
     return initial?.call();
@@ -411,7 +416,8 @@ class _$_Initial implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<JobsModel> response)? loadedState,
+    TResult Function(List<JobsModel> jobs, List<SkillModel> skills)?
+        loadedState,
     TResult Function(String message, DateTime dateTime)? errorState,
     required TResult orElse(),
   }) {
@@ -504,7 +510,8 @@ class _$_Loading implements _Loading {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<JobsModel> response) loadedState,
+    required TResult Function(List<JobsModel> jobs, List<SkillModel> skills)
+        loadedState,
     required TResult Function(String message, DateTime dateTime) errorState,
   }) {
     return loading();
@@ -515,7 +522,8 @@ class _$_Loading implements _Loading {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<JobsModel> response)? loadedState,
+    TResult Function(List<JobsModel> jobs, List<SkillModel> skills)?
+        loadedState,
     TResult Function(String message, DateTime dateTime)? errorState,
   }) {
     return loading?.call();
@@ -526,7 +534,8 @@ class _$_Loading implements _Loading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<JobsModel> response)? loadedState,
+    TResult Function(List<JobsModel> jobs, List<SkillModel> skills)?
+        loadedState,
     TResult Function(String message, DateTime dateTime)? errorState,
     required TResult orElse(),
   }) {
@@ -583,7 +592,7 @@ abstract class _$$_LoadedStateCopyWith<$Res> {
   factory _$$_LoadedStateCopyWith(
           _$_LoadedState value, $Res Function(_$_LoadedState) then) =
       __$$_LoadedStateCopyWithImpl<$Res>;
-  $Res call({List<JobsModel> response});
+  $Res call({List<JobsModel> jobs, List<SkillModel> skills});
 }
 
 /// @nodoc
@@ -598,13 +607,18 @@ class __$$_LoadedStateCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? response = freezed,
+    Object? jobs = freezed,
+    Object? skills = freezed,
   }) {
     return _then(_$_LoadedState(
-      response == freezed
-          ? _value._response
-          : response // ignore: cast_nullable_to_non_nullable
+      jobs == freezed
+          ? _value._jobs
+          : jobs // ignore: cast_nullable_to_non_nullable
               as List<JobsModel>,
+      skills == freezed
+          ? _value._skills
+          : skills // ignore: cast_nullable_to_non_nullable
+              as List<SkillModel>,
     ));
   }
 }
@@ -612,18 +626,28 @@ class __$$_LoadedStateCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_LoadedState implements _LoadedState {
-  const _$_LoadedState(final List<JobsModel> response) : _response = response;
+  const _$_LoadedState(
+      final List<JobsModel> jobs, final List<SkillModel> skills)
+      : _jobs = jobs,
+        _skills = skills;
 
-  final List<JobsModel> _response;
+  final List<JobsModel> _jobs;
   @override
-  List<JobsModel> get response {
+  List<JobsModel> get jobs {
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_response);
+    return EqualUnmodifiableListView(_jobs);
+  }
+
+  final List<SkillModel> _skills;
+  @override
+  List<SkillModel> get skills {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_skills);
   }
 
   @override
   String toString() {
-    return 'HomeState.loadedState(response: $response)';
+    return 'HomeState.loadedState(jobs: $jobs, skills: $skills)';
   }
 
   @override
@@ -631,12 +655,15 @@ class _$_LoadedState implements _LoadedState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_LoadedState &&
-            const DeepCollectionEquality().equals(other._response, _response));
+            const DeepCollectionEquality().equals(other._jobs, _jobs) &&
+            const DeepCollectionEquality().equals(other._skills, _skills));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(_response));
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(_jobs),
+      const DeepCollectionEquality().hash(_skills));
 
   @JsonKey(ignore: true)
   @override
@@ -648,10 +675,11 @@ class _$_LoadedState implements _LoadedState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<JobsModel> response) loadedState,
+    required TResult Function(List<JobsModel> jobs, List<SkillModel> skills)
+        loadedState,
     required TResult Function(String message, DateTime dateTime) errorState,
   }) {
-    return loadedState(response);
+    return loadedState(jobs, skills);
   }
 
   @override
@@ -659,10 +687,11 @@ class _$_LoadedState implements _LoadedState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<JobsModel> response)? loadedState,
+    TResult Function(List<JobsModel> jobs, List<SkillModel> skills)?
+        loadedState,
     TResult Function(String message, DateTime dateTime)? errorState,
   }) {
-    return loadedState?.call(response);
+    return loadedState?.call(jobs, skills);
   }
 
   @override
@@ -670,12 +699,13 @@ class _$_LoadedState implements _LoadedState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<JobsModel> response)? loadedState,
+    TResult Function(List<JobsModel> jobs, List<SkillModel> skills)?
+        loadedState,
     TResult Function(String message, DateTime dateTime)? errorState,
     required TResult orElse(),
   }) {
     if (loadedState != null) {
-      return loadedState(response);
+      return loadedState(jobs, skills);
     }
     return orElse();
   }
@@ -719,9 +749,12 @@ class _$_LoadedState implements _LoadedState {
 }
 
 abstract class _LoadedState implements HomeState {
-  const factory _LoadedState(final List<JobsModel> response) = _$_LoadedState;
+  const factory _LoadedState(
+          final List<JobsModel> jobs, final List<SkillModel> skills) =
+      _$_LoadedState;
 
-  List<JobsModel> get response;
+  List<JobsModel> get jobs;
+  List<SkillModel> get skills;
   @JsonKey(ignore: true)
   _$$_LoadedStateCopyWith<_$_LoadedState> get copyWith =>
       throw _privateConstructorUsedError;
@@ -803,7 +836,8 @@ class _$_ErrorState implements _ErrorState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<JobsModel> response) loadedState,
+    required TResult Function(List<JobsModel> jobs, List<SkillModel> skills)
+        loadedState,
     required TResult Function(String message, DateTime dateTime) errorState,
   }) {
     return errorState(message, dateTime);
@@ -814,7 +848,8 @@ class _$_ErrorState implements _ErrorState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<JobsModel> response)? loadedState,
+    TResult Function(List<JobsModel> jobs, List<SkillModel> skills)?
+        loadedState,
     TResult Function(String message, DateTime dateTime)? errorState,
   }) {
     return errorState?.call(message, dateTime);
@@ -825,7 +860,8 @@ class _$_ErrorState implements _ErrorState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<JobsModel> response)? loadedState,
+    TResult Function(List<JobsModel> jobs, List<SkillModel> skills)?
+        loadedState,
     TResult Function(String message, DateTime dateTime)? errorState,
     required TResult orElse(),
   }) {

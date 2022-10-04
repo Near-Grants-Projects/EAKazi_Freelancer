@@ -4,7 +4,6 @@ import 'package:ea_kazi/src/constants/constants_exports.dart';
 import 'package:ea_kazi/src/routes/router.gr.dart';
 import 'package:flutter/material.dart';
 
-import '../common/jobs_courses_common_exports.dart';
 import 'courses_components/course_progress_indicator.dart';
 
 class CoursesScreen extends StatelessWidget {
@@ -24,7 +23,7 @@ class CoursesScreen extends StatelessWidget {
           children: [
             const SearchField(),
             gapH2,
-            const Categories(),
+            // const Categories(),
             gapH4,
             ReusableCardWidget(
               imagePath: AppAssetPaths.googleIcon,

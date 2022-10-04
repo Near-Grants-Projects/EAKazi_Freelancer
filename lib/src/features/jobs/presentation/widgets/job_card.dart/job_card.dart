@@ -1,4 +1,5 @@
 import 'package:ea_kazi/src/features/jobs/core/models/jobs_model/jobs_model.dart';
+import 'package:ea_kazi/src/utils/util_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:ea_kazi/src/constants/constants_exports.dart';
 import 'package:ea_kazi/src/utils/utils_exports.dart';
@@ -11,6 +12,10 @@ class JobCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    DateTime currentDate = DateTime.now();
+
+    DateTime dateCreated = DateTime.parse(job.createdAt);
+
     return InkWell(
       onTap: () {},
       child: Container(
@@ -36,13 +41,6 @@ class JobCard extends StatelessWidget {
               decoration: BoxDecoration(
                 color: AppColors.scaffoldBgColor,
                 borderRadius: BorderRadius.circular(Sizes.p32),
-                // boxShadow: const [
-                //   BoxShadow(
-                //     color: AppColors.jobCardShadowColor,
-                //     spreadRadius: .5,
-                //     blurRadius: Sizes.p4,
-                //   )
-                // ],
               ),
               child: SvgPicture.asset('assets/icons/eakazi.svg'),
             ),
@@ -63,26 +61,26 @@ class JobCard extends StatelessWidget {
                       ),
                 ),
                 Text(
-                  job.description,
-                  style: Theme.of(context).textTheme.caption!.copyWith(
-                        color: AppColors.secondaryColor,
-                      ),
+                  '${job.location} • ${job.culture}',
+                  style: Theme.of(context)
+                      .textTheme
+                      .caption!
+                      .copyWith(color: AppColors.secondaryColor),
                 )
               ],
             ),
-            // Column(
-            //   mainAxisSize: MainAxisSize.min,
-            //   children: [
-            //     Text(
-            //       auxilliarytext,
-            //       style: Theme.of(context).textTheme.bodyText2!.copyWith(
-            //             color: AppColors.secondaryColor,
-            //           ),
-            //     ),
-            //     gapH2,
-            //     altWidget,
-            //   ],
-            // )
+            const Spacer(),
+            Column(
+              children: [
+                Text(
+                  getTimeAgo(currentDate, dateCreated),
+                  style: Theme.of(context).textTheme.bodyText2!.copyWith(
+                        color: AppColors.secondaryColor,
+                      ),
+                ),
+                gapH2,
+              ],
+            )
           ],
         ),
       ),
