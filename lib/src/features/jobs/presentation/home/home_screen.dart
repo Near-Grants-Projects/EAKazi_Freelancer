@@ -1,4 +1,5 @@
 import 'package:ea_kazi/src/common/common_exports.dart';
+import 'package:ea_kazi/src/common/popups/error_popup.dart';
 import 'package:ea_kazi/src/constants/constants_exports.dart';
 import 'package:ea_kazi/src/features/jobs&courses/presentation/common/categories.dart';
 import 'package:ea_kazi/src/features/jobs/presentation/home/bloc/home_bloc.dart';
@@ -21,7 +22,14 @@ class HomeScreen extends StatelessWidget {
       create: (context) => getIt<HomeBloc>()..add(const HomeEvent.started()),
       child: BlocConsumer<HomeBloc, HomeState>(
         listener: (context, state) {
-          // TODO: implement listener
+          state.whenOrNull(errorState: (message, date) {
+            Navigator.of(context).pop(true);
+
+            showModalBottomSheet(
+                backgroundColor: Colors.transparent,
+                context: context,
+                builder: (context) => ErrorPopup(title: message));
+          });
         },
         buildWhen: (oldState, newState) {
           return newState.maybeWhen(

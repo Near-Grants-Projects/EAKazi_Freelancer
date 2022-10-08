@@ -17,10 +17,10 @@ import 'package:ea_kazi/src/features/jobs&courses/jobs_courses_exports.dart'
     as _i2;
 import 'package:ea_kazi/src/features/jobs&courses/presentation/alerts_screen.dart'
     as _i5;
-import 'package:ea_kazi/src/features/jobs&courses/presentation/jobs/jobs_screen.dart'
-    as _i3;
 import 'package:ea_kazi/src/features/jobs/presentation/home/home_screen.dart'
     as _i4;
+import 'package:ea_kazi/src/features/jobs/presentation/jobs/jobs_screen.dart'
+    as _i3;
 import 'package:flutter/material.dart' as _i7;
 
 class AppRouter extends _i6.RootStackRouter {

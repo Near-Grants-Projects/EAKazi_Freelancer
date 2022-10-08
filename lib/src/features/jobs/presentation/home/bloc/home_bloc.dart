@@ -38,19 +38,6 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
           emit(_LoadedState(_jobs, _skills));
         });
       });
-
-      // .then((result) {
-
-      // .whenComplete(() {
-      //   return this.th
-      // })
-      // .catchError((err) {
-      //   // if (err is Failure) {
-      //   //   emit(_ErrorState(err.message, DateTime.now()));
-      //   // } else {
-      //   //   emit(_ErrorState(Failure.somethingWentWrongMsg, DateTime.now()));
-      //   // }
-      // });
     });
   }
 }

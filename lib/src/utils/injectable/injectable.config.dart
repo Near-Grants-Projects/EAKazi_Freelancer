@@ -20,7 +20,8 @@ import '../../features/authentication/presentation/sign_up/bloc/sign_up_bloc.dar
 import '../../features/jobs/core/apis/jobs_api_manager.dart' as _i6;
 import '../../features/jobs/core/repository/jobs_repository.dart' as _i9;
 import '../../features/jobs/core/repository/jobs_repository_impl.dart' as _i10;
-import '../../features/jobs/presentation/home/bloc/home_bloc.dart'
+import '../../features/jobs/presentation/home/bloc/home_bloc.dart' as _i12;
+import '../../features/jobs/presentation/jobs/bloc/jobs_bloc.dart'
     as _i11; // ignore_for_file: unnecessary_lambdas
 
 // ignore_for_file: lines_longer_than_80_chars
@@ -40,7 +41,9 @@ _i1.GetIt $initGetIt(_i1.GetIt get,
   gh.lazySingleton<_i9.JobRepository>(
       () => _i10.JobRepositoryImpl(get<_i6.JobsApiManager>()),
       instanceName: 'default');
-  gh.factory<_i11.HomeBloc>(
-      () => _i11.HomeBloc(get<_i9.JobRepository>(instanceName: 'default')));
+  gh.factory<_i11.JobsBloc>(
+      () => _i11.JobsBloc(get<_i9.JobRepository>(instanceName: 'default')));
+  gh.factory<_i12.HomeBloc>(
+      () => _i12.HomeBloc(get<_i9.JobRepository>(instanceName: 'default')));
   return get;
 }
